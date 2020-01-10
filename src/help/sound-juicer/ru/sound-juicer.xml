@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- -*- indent-tabs-mode: nil -*- -->
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN" "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd" [
+<!ENTITY app "Sound Juicer">
+<!ENTITY application "<application>&app;</application>">
+<!ENTITY appversion "2.22.0">
+<!ENTITY manrevision "2.22.0">
+<!ENTITY musicbrainz "<ulink url='http://www.musicbrainz.org/'>MusicBrainz</ulink>">
+]>
+<?gnome-doc-status Version: 2.12
+Status: Draft
+?>
+<article id="index" lang="ru">
+  <articleinfo>
+    <title>Руководство по <application>Звуковыжималке</application></title>
+    
+    <copyright>
+      <year>2003</year>
+      <holder>Mike Hearn (mike@theoretic.com)</holder>
+    </copyright>
+    <copyright>
+      <year>2005</year>
+      <holder>Shaun McCance</holder>
+    </copyright>
+    <copyright>
+      <year>2008</year>
+      <holder>Andreas Freund</holder>
+    </copyright><copyright><year>2008</year><holder>Василий Фаронов (qvvx@yandex.ru)</holder></copyright>
+    
+    <publisher>
+      <publishername>GNOME Documentation Project</publishername>
+    </publisher>
+
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+
+    <authorgroup>
+      <author>
+        <firstname>Andreas</firstname>
+        <surname>Freund</surname>
+        <affiliation>
+          <orgname>Google Highly Open Participation Contest</orgname>
+        </affiliation>
+      </author>
+      <author>
+        <firstname>Mike</firstname>
+        <surname>Hearn</surname>
+        <email>mike@theoretic.com</email>
+      </author>
+      <author role="maintainer">
+        <firstname>Shaun</firstname>
+        <surname>McCance</surname>
+        <affiliation>
+          <orgname>GNOME Documentation Project</orgname>
+        </affiliation>
+        <email>shaunm@gnome.org</email>
+      </author>
+    </authorgroup>
+
+    <revhistory>
+      <revision>
+        <revnumber>2.22.0</revnumber>
+        <date>2008-01-12</date>
+        <revdescription>
+          <para role="author">Andreas Freund</para>
+          <para role="publisher">GNOME Documentation Project</para>
+        </revdescription>
+      </revision>
+      <revision>
+        <revnumber>2.10</revnumber>
+        <date>2005-03-06</date>
+        <revdescription>
+          <para role="author">Shaun McCance</para>
+          <para role="publisher">GNOME Documentation Project</para>
+        </revdescription>
+      </revision>
+      <revision>
+        <revnumber>2.0</revnumber>
+        <date>2003-07-06</date>
+        <revdescription>
+          <para role="author">Mike Hearn <email>mike@theoretic.com</email></para>
+          <para role="publisher">GNOME Documentation Project</para>
+        </revdescription>
+      </revision>
+    </revhistory>
+    <!-- Translators may also add here feedback address for translations -->
+
+    <abstract role="description">
+      <para><application>Звуковыжималка</application> — это простой и понятный инструмент для копирования музыки с компакт-дисков (CD). С помощью него вы можете преобразовать звуковые CD в звуковые файлы и сохранить эти файлы на вашем компьютере, чтобы в дальнейшем воспроизводить их.</para>
+    </abstract>
+  </articleinfo>
+
+  <section id="intro">
+    <title>Введение</title>
+    <anchor id="aboutex"/>
+    <anchor id="notice"/>
+    <indexterm>
+      <primary>Звуковыжималка</primary>
+      <secondary>Руководство</secondary>
+      <tertiary>sound-juicer</tertiary>
+    </indexterm>
+
+    <para><application>Звуковыжималка</application> — это простой и понятный инструмент для копирования музыки с компакт-дисков (CD). С помощью него вы можете преобразовать звуковые CD в звуковые файлы и сохранить эти файлы на вашем компьютере, чтобы в дальнейшем воспроизводить их. Кроме того, <application>Звуковыжималка</application> может проигрывать звуковые дорожки прямо с CD, что позволяет вам прослушивать CD до копирования.</para>
+
+    <para><application>Звуковыжималка</application> проста в использовании и не требует частого вмешательства пользователя. Когда вы запустите <application>Звуковыжималку</application>, она изучит CD, находящийся в приводе, и попытается найти сведения о дорожках на нём с помощью бесплатной службы <ulink url="http://www.musicbrainz.org/">MusicBrainz</ulink>.</para>
+
+    <informalfigure>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/startup.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase><application>Звуковыжималка</application> on startup</phrase>
+          </textobject>
+        </mediaobject>
+      </screenshot>
+    </informalfigure>
+  </section>
+
+  <section id="track-data">
+    <title>Ввод сведений о дорожках</title>
+
+    <para>При вставке звукового CD <application>Звуковыжималка</application> автоматически получает сведения о дорожках с <ulink url="http://www.musicbrainz.org/">MusicBrainz</ulink>. <ulink url="http://www.musicbrainz.org/">MusicBrainz</ulink> — это бесплатная служба, которая предоставляет сведения о большинстве изданных CD. <application>Звуковыжималка</application> использует серийный номер CD, а также положения и длительности дорожек, чтобы найти нужную запись в базе данных <ulink url="http://www.musicbrainz.org/">MusicBrainz</ulink>.</para>
+
+    <para>Иногда встречаются несколько CD с одинаковой разметкой. Если найдено несколько CD, <application>Звуковыжималка</application> предложит вам выбрать нужный набор сведений с помощью диалога. Если будет найден неверный CD, или если в <ulink url="http://www.musicbrainz.org/">MusicBrainz</ulink> не обнаружится подходящего CD, вам придётся ввести сведения о дорожках вручную. Кроме того, если хотите, вы можете внести сведения о CD в базу данных <ulink url="http://www.musicbrainz.org/">MusicBrainz</ulink> с помощью значка, который при этом появится.</para>
+
+    <para>В верхней части окна находятся поля для названия, исполнителя, года и жанра CD. Ниже находится список звуковых дорожек на CD. Вы можете указать название и исполнителя для каждой дорожки. <application>Звуковыжималка</application> использует эти сведения, чтобы дать имена файлам и папкам, в которых будет сохранена ваша музыка. Кроме того, сведения о дорожке и альбоме записываются прямо в звуковые файлы. Многие музыкальные плейеры, включая переносные устройства, используют эти сведения для упорядочивания и показа звуковых файлов.</para>
+
+    <para>Чтобы изменить название дорожки, выделите её, затем щёлкните на её названии. Когда вы закончите изменять название, нажмите клавишу <keycap>Enter</keycap> на клавиатуре, или щёлкните где-нибудь за пределами названия.</para>
+
+    <para>Когда вы изменяете исполнителя CD, автоматически изменяется исполнитель каждой дорожки, но только в том случае, если они совпадали до изменения (таким образом, при изменении исполнителя альбома-сборника не будут изменены исполнители дорожек). Большинство CD записаны одним исполнителем, так что эта возможность позволяет сэкономить время, избавляя вас от необходимости вводить исполнителя отдельно для каждой дорожки.</para>
+
+    <para>Некоторые CD, однако, являются сборниками песен разных исполнителей. Для таких CD вам придётся ввести исполнителя каждой дорожки отдельно. Чтобы указать исполнителя дорожки, выделите её, затем щёлкните на исполнителе. Вы можете ввести в поле исполнителя CD что-нибудь наподобие «Разные», или просто оставить поле пустым, в зависимости от того, как вы предпочитаете организовывать свою музыку.</para>
+
+    <tip>
+      <title>Entering Track Data With the Keyboard Only</title>
+      <para>You can enter track data without using the mouse.  Use the up and
+      down arrow keys to select a track, and the left and right arrow keys to
+      focus the title or artist.  Press the space bar to begin editing the
+      title or artist, and press <keycap>Enter</keycap> when finished.</para>
+    </tip>
+
+    <para>К сожалению, <ulink url="http://www.musicbrainz.org/">MusicBrainz</ulink> не предоставляет сведения о жанре, но <application>Звуковыжималка</application> включает несколько известных жанров:</para>
+
+    <anchor id="genres"/>
+    <itemizedlist>
+      <listitem><para>Эмбиент</para></listitem>
+      <listitem><para>Блюз</para></listitem>
+      <listitem><para>Классика</para></listitem>
+      <listitem><para>Кантри</para></listitem>
+      <listitem><para>Танцевальная</para></listitem>
+      <listitem><para>Электроника</para></listitem>
+      <listitem><para>Фолк</para></listitem>
+      <listitem><para>Фанк</para></listitem>
+      <listitem><para>Джаз</para></listitem>
+      <listitem><para>Латинская</para></listitem>
+      <listitem><para>Поп</para></listitem>
+      <listitem><para>Рэп</para></listitem>
+      <listitem><para>Рэгги</para></listitem>
+      <listitem><para>Рок</para></listitem>
+      <listitem><para>Соул</para></listitem>
+      <listitem><para>Spoken word</para></listitem>
+    </itemizedlist>
+
+    <tip><para>If you choose to make a custom genre, it will be remembered in the future.</para></tip>
+
+  </section>
+
+  <section id="extracting">
+    <title>Копирование музыки</title>
+    <anchor id="using"/>
+
+    <para>По умолчанию <application>Звуковыжималка</application> копирует все дорожки CD в звуковые файлы. Если вы не хотите извлекать какие-либо из дорожек, вы можете выбрать нужные дорожки с помощью флажков в первом столбце списка дорожек. Будут скопированы только те дорожки, которые отмечены флажками.</para>
+
+    <para>Также можно использовать пункты меню <menuchoice><guimenu>Правка</guimenu><guimenuitem>Выделить всё</guimenuitem></menuchoice> и <menuchoice><guimenu>Правка</guimenu><guimenuitem>Снять выделение</guimenuitem></menuchoice>, чтобы пометить все дорожки для копирования или убрать все пометки.</para>
+
+    <para>После того, как вы введёте все нужные сведения, нажмите кнопку <guibutton>Скопировать</guibutton>, или нажмите <keycombo><keycap>Ctrl</keycap><keycap>Enter</keycap></keycombo>. <application>Звуковыжималка</application> приступит к чтению звука с CD и сохранению его в файлах на вашем компьютере. По умолчанию звуковые файлы сохраняются в папке <filename>Музыка</filename> в вашей домашней папке.</para>
+
+    <para>Как только начнётся копирование, кнопка <guibutton>Скопировать</guibutton> превратится в кнопку <guibutton>Стоп</guibutton>. Вы можете в любой момент нажать эту кнопку, чтобы остановить копирование.</para>
+
+    <para><application>Звуковыжималка</application> показывает значок рядом с той дорожкой, которая в данный момент копируется. Кроме того, в строке состояния в нижней части окна можно увидеть общее состояние копирования и прогноз оставшегося времени.</para>
+
+    <para>Копирование CD может занять много времени, в зависимости от скорости вашего компьютера. Вы можете свернуть <application>Звуковыжималку</application> или переместить её на другое рабочее место, чтобы продолжать работать с компьютером во время копирования звука.</para>
+  </section>
+
+  <section id="playing">
+    <title>Воспроизведение</title>
+
+    <para><application>Звуковыжималка</application> позволяет вам проигрывать дорожки прямо с CD. Чтобы начать воспроизведение CD, нажмите кнопку <guibutton>Воспроизвести</guibutton>, либо нажмите <keycombo><keycap>Ctrl</keycap><keycap>P</keycap></keycombo>. Чтобы воспроизвести определённую дорожку, выделите её и нажмите <guibutton>Воспроизвести</guibutton>, или просто дважды щёлкните на дорожке.</para>
+
+    <para>Когда <application>Звуковыжималка</application> воспроизводит CD, кнопка <guibutton>Воспроизвести</guibutton> превращается в кнопку <guibutton>Приостановить</guibutton>. Вы можете в любой момент нажать её, чтобы приостановить воспроизведение, а затем снова нажать <guibutton>Воспроизвести</guibutton>, чтобы продолжить воспроизведение с того места.</para>
+
+    <para>Во время воспроизведения в <application>Звуковыжималке</application> появляется ползунок, который показывает положение на текущей дорожке. Чтобы перейти к другой части дорожки, перетащите рукоятку по ползунку.</para>
+  </section>
+
+  <section id="preferences">
+    <title>Параметры</title>
+
+    <para>С помощью окна параметров вы можете управлять следующим:</para>
+
+    <itemizedlist>
+      <listitem><para>какой CD-привод используется <application>Звуковыжималкой</application> (если у вас несколько приводов);</para></listitem>
+      <listitem><para>надо ли извлекать CD после того, как <application>Звуковыжималка</application> закончит его копировать;</para></listitem>
+      <listitem><para>надо ли открывать папку музыки после того, как <application>Звуковыжималка</application> закончит копировать;</para></listitem>
+      <listitem><para>где на вашем компьютере следует размещать звуковые файлы;</para></listitem>
+      <listitem><para>какую иерархию папок использовать внутри папки музыки;</para></listitem>
+      <listitem><para>какими должны быть имена скопированных звуковых файлов;</para></listitem>
+      <listitem><para>какой формат и кодек использовать при копировании звуковых файлов.</para></listitem>
+    </itemizedlist>
+
+    <informalfigure>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/prefs.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase>Окно параметров</phrase>
+          </textobject>
+        </mediaobject>
+      </screenshot>
+    </informalfigure>
+
+    <section id="prefs-drive">
+      <title>Выбор CD-привода</title>
+
+      <para>Если в вашем компьютере несколько CD-приводов, то в выпадающем списке <guilabel>Привод CD</guilabel> в разделе <guilabel>Устройство</guilabel> вы можете выбрать нужный. С помощью полей <guibutton>Извлекать после завершения</guibutton> и <guibutton>Открывать папку музыки после завершения</guibutton> вы можете управлять тем, будет ли <application>Звуковыжималка</application> извлекать CD из привода и открывать вашу папку музыки после завершения копирования звуковых файлов.</para>
+    </section>
+
+    <section id="prefs-naming">
+      <title>Наименование звуковых файлов</title>
+
+      <para>В выпадающем списке <guilabel>Папка для музыки</guilabel> вы можете выбрать папку, в которой будут сохраняться ваши звуковые файлы. Выберите одну из папок из списка, или выберите <guilabel>Другой</guilabel>, чтобы указать другую папку с помощью диалога выбора файлов.</para>
+
+      <para>В разделе <guilabel>Имена дорожек</guilabel> вы можете управлять тем, как будут называться файлы и папки. <application>Звуковыжималка</application> может сохранять звуковые файлы в отдельных папках, тем самым помогая вам упорядочивать вашу музыку. Вы можете указать, как будут создаваться и называться эти папки, с помощью выпадающего списка <guilabel>Иерархия папок</guilabel>. По умолчанию <application>Звуковыжималка</application> создаёт папку для исполнителя альбома, а в ней — подпапку для альбома.</para>
+
+      <para>С помощью выпадающего списка <guilabel>Имя файла</guilabel> вы можете указать, как будут называться звуковые файлы. По умолчанию <application>Звуковыжималка</application> использует номер дорожки, затем дефис и название дорожки.</para>
+
+      <para>Установите флажок в поле <guibutton>Вырезать специальные символы</guibutton>, чтобы <application>Звуковыжималка</application> удаляла или заменяла в именах файлов такие символы, как пробелы и знаки пунктуации. Это полезно, если вы хотите поместить звуковые файлы на переносное устройство или на другой компьютер, в котором имеются ограничения на названия файлов.</para>
+
+      <note><para>Даже если флажок в поле <guibutton>Вырезать специальные символы</guibutton> не поставлен, <application>Звуковыжималка</application> всё равно будет удалять из имён файлов символ <literal>/</literal>. Этот символ нельзя использовать в именах файлов в Unix, GNU/Linux и подобных системах.</para></note>
+
+      <tip><para>At the bottom of the <guilabel>Track Names</guilabel> section,
+      an example path is shown.  This lets you know what a file name might look
+      like and where it is placed, according to your settings for <guilabel>Folder
+      hierarchy</guilabel>, <guilabel>File name</guilabel>, and <guibutton>Strip
+      special characters</guibutton>.</para></tip>
+    </section>
+
+    <section id="prefs-format">
+      <title>Выбор формата</title>
+
+      <para>Вы можете выбрать, в каком формате <application>Звуковыжималка</application> будет сохранять дорожки на вашем компьютере. Существует несколько форматов, и у каждого свои достоинства. На разных компьютерах доступны разные форматы, но обычно имеются следующие варианты:</para>
+
+      <variablelist>
+        <varlistentry>
+          <term>CD-качество, с потерями (Ogg multimedia)</term>
+          <listitem>
+            <para>Этот параметр выбран по умолчанию. <ulink url="http://www.vorbis.org/">Ogg Vorbis</ulink>, как и другие форматы с потерями (наподобие MP3 и AAC), отбрасывает часть информации из исходных звуковых данных. Хотя получаемый звуковой файл не является точной копией CD-звука, большинство слушателей не заметят разницы. Поэтому у форматов с потерями обычно очень небольшие размеры файлов.</para>
+
+            <para>Ogg Vorbis — это формат с потерями, который используется по умолчанию в <application>Звуковыжималке</application>. Ogg Vorbis — открытый формат, разработанный <ulink url="http://xiph.org/">фондом Xiph.Org</ulink>, и производимые им звуковые файлы обычно имеют меньший размер и более высокое качество, чем у многих других форматов с потерями. Хотя этот формат не так распространён, как более старый формат MP3, большинство музыкальных программ способно проигрывать файлы Ogg Vorbis. Поддержка этого формата встроена также во многие аппаратные плейеры.</para>
+
+            <para>Xiph.Org ведёт списки <ulink url="http://wiki.xiph.org/index.php/VorbisSoftwarePlayers">программ-плейеров</ulink>, <ulink url="http://wiki.xiph.org/index.php/PortablePlayers">переносных аппаратных плейеров</ulink> и <ulink url="http://wiki.xiph.org/index.php/StaticPlayers">стационарных аппаратных плейеров</ulink>, которые поддерживают Ogg Vorbis.</para>
+          </listitem>
+        </varlistentry>
+
+        <varlistentry>
+          <term>CD-качество, без потерь (FLAC аудио)</term>
+          <listitem>
+            <para><ulink url="http://flac.sourceforge.net/">FLAC</ulink> — это звуковой формат без потерь. При преобразовании во FLAC не теряются никакие звуковые данные, несмотря на то, что они при этом сильно сжимаются (степень сжатия достигает 70 %). FLAC и другие форматы без потерь популярны в тех случаях, когда нужен звук высокой точности, но при этом необходимо сжать файлы, чтобы сократить объём занимаемого пространства на диске и время передачи по сети.</para>
+          </listitem>
+        </varlistentry>
+
+        <varlistentry>
+          <term>CD-качество, AAC (MPEG-4 аудио)</term>
+          <listitem>
+            <para>AAC (от англ. Advanced Audio Coding) — это стандартный звуковой формат с потерями. Он является последователем формата MP3 и достигает более высокого качества звука по сравнению с MP3. Многие программные и аппаратные плейеры поддерживают формат AAC.</para>
+          </listitem>
+        </varlistentry>
+
+        <varlistentry>
+          <term>Голос, без потерь (WAV аудио)</term>
+          <listitem>
+            <para>С помощью голосового профиля создаются низкокачественные монофонические звуковые файлы. Вы можете выбрать этот формат для лекций, книг и других речевых CD, где потеря качества звука не столь важна.</para>
+          </listitem>
+        </varlistentry>
+        
+<varlistentry>
+          <term>MP3</term>
+          <listitem>
+            <para>MP3 — это звуковой формат с потерями. Он широко распространён и поддерживается повсеместно, особенно благодаря его использованию в переносных медиа-плейерах.</para>
+          </listitem>
+        </varlistentry>
+
+      </variablelist>
+
+      <para>Вы можете нажать кнопку <guibutton>Изменить профили</guibutton>, чтобы изменить доступные звуковые форматы. Диалог изменения профилей даёт прямой доступ к преобразованию звука. Профили задаются с помощью конвейеров <application>GStreamer</application>. <application>GStreamer</application> — это библиотека мультимедиа, которая используется <application>Звуковыжималкой</application> и другими мультимедиа-приложениями. Подробное рассмотрение звуковых профилей выходит за рамки этого документа.</para>
+    </section>
+  </section>
+
+</article>

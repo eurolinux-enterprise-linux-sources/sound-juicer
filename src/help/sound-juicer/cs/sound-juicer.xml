@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- -*- indent-tabs-mode: nil -*- -->
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN" "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd" [
+<!ENTITY app "Sound Juicer">
+<!ENTITY application "<application>&app;</application>">
+<!ENTITY appversion "2.22.0">
+<!ENTITY manrevision "2.22.0">
+<!ENTITY musicbrainz "<ulink url='http://www.musicbrainz.org/'>MusicBrainz</ulink>">
+]>
+<?gnome-doc-status Version: 2.12
+Status: Draft
+?>
+<article id="index" lang="cs">
+  <articleinfo>
+    <title>Příručka k aplikaci <application>Sound Juicer</application></title>
+    
+    <copyright>
+      <year>2003</year>
+      <holder>Mike Hearn (mike@theoretic.com)</holder>
+    </copyright>
+    <copyright>
+      <year>2005</year>
+      <holder>Shaun McCance</holder>
+    </copyright>
+    <copyright>
+      <year>2008</year>
+      <holder>Andreas Freund</holder>
+    </copyright><copyright><year>2009</year><holder>Marek Černocký (marek@manet.cz)</holder></copyright>
+    
+    <publisher>
+      <publishername>Dokumentační projekt GNOME</publishername>
+    </publisher>
+
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+
+    <authorgroup>
+      <author>
+        <firstname>Andreas</firstname>
+        <surname>Freund</surname>
+        <affiliation>
+          <orgname>Google Highly Open Participation Contest</orgname>
+        </affiliation>
+      </author>
+      <author>
+        <firstname>Mike</firstname>
+        <surname>Hearn</surname>
+        <email>mike@theoretic.com</email>
+      </author>
+      <author role="maintainer">
+        <firstname>Shaun</firstname>
+        <surname>McCance</surname>
+        <affiliation>
+          <orgname>Dokumentační projekt GNOME</orgname>
+        </affiliation>
+        <email>shaunm@gnome.org</email>
+      </author>
+    </authorgroup>
+
+    <revhistory>
+      <revision>
+        <revnumber>2.22.0</revnumber>
+        <date>12.1.2008</date>
+        <revdescription>
+          <para role="author">Andreas Freund</para>
+          <para role="publisher">Dokumentační projekt GNOME</para>
+        </revdescription>
+      </revision>
+      <revision>
+        <revnumber>2.10</revnumber>
+        <date>6.3.2005</date>
+        <revdescription>
+          <para role="author">Shaun McCance</para>
+          <para role="publisher">Dokumentační projekt GNOME</para>
+        </revdescription>
+      </revision>
+      <revision>
+        <revnumber>2.0</revnumber>
+        <date>6.7.2003</date>
+        <revdescription>
+          <para role="author">Mike Hearn <email>mike@theoretic.com</email></para>
+          <para role="publisher">Dokumentační projekt GNOME</para>
+        </revdescription>
+      </revision>
+    </revhistory>
+    <!-- Translators may also add here feedback address for translations -->
+
+    <abstract role="description">
+      <para><application>Sound Juicer</application> je jednoduchý a přehledný nástroj na extrakci stop z CD. Umožňuje vám extrahovat nahrávky ze zvukových kompaktních disků a převádět je na zvukové soubory, kterým rozumí váš počítač a umí je přehrávat.</para>
+    </abstract>
+  </articleinfo>
+
+  <section id="intro">
+    <title>Úvod</title>
+    <anchor id="aboutex"/>
+    <anchor id="notice"/>
+    <indexterm>
+      <primary>Sound Juicer</primary>
+      <secondary>Příručka</secondary>
+      <tertiary>sound-juicer</tertiary>
+    </indexterm>
+
+    <para><application>Sound Juicer</application> je jednoduchý a přehledný nástroj na extrakci stop z CD. Umožňuje vám extrahovat nahrávky ze zvukových kompaktních disků a převádět je na zvukové soubory, kterým rozumí váš počítač a umí je přehrávat. Navíc umí <application>Sound Juicer</application> přehrávat zvukové stopy přímo z CD, takže si můžete CD před jeho extrakcí poslechnout.</para>
+
+    <para><application>Sound Juicer</application> je navržený tak, aby byl jednoduchý na používání a pracoval s minimem potřebných zásahů ze strany uživatele. Když aplikaci <application>Sound Juicer</application> spustíte, vyhledá CD v mechanikách a zkusí najít informace o zvukových stopách pomocí volně dostupné služby <ulink url="http://www.musicbrainz.org/">MusicBrainz</ulink>.</para>
+
+    <informalfigure>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/startup.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase><application>Sound Juicer</application> po spuštění</phrase>
+          </textobject>
+        </mediaobject>
+      </screenshot>
+    </informalfigure>
+  </section>
+
+  <section id="track-data">
+    <title>Zadávání údajů o stopách</title>
+
+    <para>Když vložíte zvukové CD, <application>Sound Juicer</application> automaticky získá údaje o stopách z <ulink url="http://www.musicbrainz.org/">MusicBrainz</ulink>. <ulink url="http://www.musicbrainz.org/">MusicBrainz</ulink> je svobodná služba poskytující databázi údajů pro většinu vydaných CD. <application>Sound Juicer</application> používá sériové číslo CD a pozice a délky stop k nalezení shodného CD v databázi <ulink url="http://www.musicbrainz.org/">MusicBrainz</ulink>.</para>
+
+    <para>Příležitostně se může stát, že více než jedno CD má stejné parametry. Pokud je nalezeno více než jedno CD, nabídne vám <application>Sound Juicer</application> dialogové okno, ve kterém si můžete zvolit, které údaje o CD použít. Pokud je nalezeno nesprávné CD nebo pokud <ulink url="http://www.musicbrainz.org/">MusicBrainz</ulink> neobsahuje odpovídající CD, musíte zadat informace o stopách ručně. Tyto informace můžete také, pokud se tak rozhodnete, přidat do databáze <ulink url="http://www.musicbrainz.org/">MusicBrainz</ulink> přes formulář, který se objeví.</para>
+
+    <para>V horní části okna jsou textová pole pro název, umělce, rok a žánr CD. Pod nimi se nachází seznam zvukových stop na CD. Můžete nastavit název a umělce pro každou stopu. Aplikace <application>Sound Juicer</application> použije tyto informace k pojmenování souborů a složek, do kterých bude hudbu ukládat. Informace o stopě a albu se také zakódují přímo do zvukových souborů. Spousta hudebních přehrávačů, včetně přenosných, používá tyto informace k organizovaní skladeb a zobrazovaní informací o nich.</para>
+
+    <para>Pokud chcete upravit název stopy, tak ji nejdříve vyberte a potom klikněte na název. Až zadávání názvu dokončíte, zmáčkněte klávesu <keycap>Enter</keycap> nebo klikněte mimo název.</para>
+
+    <para>V případě, že upravíte umělce CD, automaticky se aktualizuje i u každé stopy, ale pouze v případě, že se shoduje se jménem před změnou (takže změna umělce alba kompilací nezmění umělce u všech stop). Většina CD je od jednoho umělce, takže vám tato vlastnost ušetří zadávání umělce u každé stopy.</para>
+
+    <para>Některá CD jsou však kompilacemi písní různých umělců. U těchto CD budete muset zadat umělce u každé stopy. Pokud tak potřebujete učinit, tak nejdříve označte stopu a potom klikněte na umělce. U umělce pro celé CD můžete zadat například „Různí“ nebo jej ponechat prázdné, záleží co upřednostňujete při organizovaní vaší hudby.</para>
+
+    <tip>
+      <title>Zadávání údajů o stopách pouze pomocí klávesnice</title>
+      <para>Údaje o stopě můžete zadávat i bez použití myši. Použijte kurzorové šipky nahoru a dolů k výběru stopy a kurzorové šipky vlevo a vpravo k výběru položky název nebo umělec. Zmáčknutím mezerníku začnete úpravy názvu nebo umělce a stiskem <keycap>Enter</keycap> je dokončíte.</para>
+    </tip>
+
+    <para><ulink url="http://www.musicbrainz.org/">MusicBrainz</ulink> bohužel neposkytuje údaj o žánru, ale <application>Sound Juicer</application> obsahuje několik předdefinovaných žánrů:</para>
+
+    <anchor id="genres"/>
+    <itemizedlist>
+      <listitem><para>Ambient</para></listitem>
+      <listitem><para>Blues</para></listitem>
+      <listitem><para>Klasická hudba</para></listitem>
+      <listitem><para>Country</para></listitem>
+      <listitem><para>Dance</para></listitem>
+      <listitem><para>Elektronika</para></listitem>
+      <listitem><para>Folk</para></listitem>
+      <listitem><para>Funky</para></listitem>
+      <listitem><para>Jazz</para></listitem>
+      <listitem><para>Latinskoamerická hudba</para></listitem>
+      <listitem><para>Pop</para></listitem>
+      <listitem><para>Rap</para></listitem>
+      <listitem><para>Reggae</para></listitem>
+      <listitem><para>Rock</para></listitem>
+      <listitem><para>Soul</para></listitem>
+      <listitem><para>Mluvené slovo</para></listitem>
+    </itemizedlist>
+
+    <tip><para>Pokud zvolíte vytvoření vlastního žánru, bude uložen pro budoucí použití.</para></tip>
+
+  </section>
+
+  <section id="extracting">
+    <title>Extrahování</title>
+    <anchor id="using"/>
+
+    <para>Standardně extrahuje <application>Sound Juicer</application> do zvukových souborů všechny stopy na CD. Pokud si nepřejete extrahovat všechny stopy, můžete si pomocí zaškrtávacích polí v prvním sloupci seznamu stop vybrat, které stopy chcete extrahovat. Extrahovat se budou pouze vybrané stopy.</para>
+
+    <para>Můžete také využít položek <menuchoice><guimenu>Upravit</guimenu><guimenuitem>Vybrat vše</guimenuitem></menuchoice> a <menuchoice><guimenu>Upravit</guimenu><guimenuitem>Zrušit výběr všeho</guimenuitem></menuchoice> v nabídce k označení všech nebo žádné stopy k extrahování.</para>
+
+    <para>Až máte zadané všechny potřebné informace, klikněte na tlačítko <guibutton>Extrahovat</guibutton> nebo zmáčkněte <keycombo><keycap>Ctrl</keycap><keycap>Enter</keycap></keycombo>. <application>Sound Juicer</application> začne načítat zvuk z CD a ukládat jej do souborů v počítači. Standardně se zvukové soubory ukládají do složky <filename>Hudba</filename> ve vaší domovské složce.</para>
+
+    <para>Ve chvíli, kdy začne extrahování, se tlačítko <guibutton>Extrahovat</guibutton> změní na tlačítko <guibutton>Zastavit</guibutton>. Kliknutím na něj můžete extrahování kdykoliv zastavit.</para>
+
+    <para><application>Sound Juicer</application> signalizuje, kterou stopu zrovna extrahuje, pomocí ikony za číslem stopy. Můžete také sledovat ukazatel celkového průběhu a odhadovaný čas do konce na stavovém řádku v dolní části okna.</para>
+
+    <para>Extrahování CD může trvat dlouho, záleží na rychlosti vašeho počítače. Aplikaci <application>Sound Juicer</application> můžete během práce bez obav minimalizovat nebo přesunout na jinou pracovní plochu a pokračovat v používání vašeho počítače k jiné činnosti.</para>
+  </section>
+
+  <section id="playing">
+    <title>Přehrávání</title>
+
+    <para>S pomocí aplikace <application>Sound Juicer</application> můžete zvukové stopy na vašem CD i přímo přehrávat. Přehrávání spustíte jednoduše kliknutím na tlačítko <guibutton>Přehrát</guibutton> nebo stiskem <keycombo><keycap>Ctrl</keycap><keycap>P</keycap></keycombo>. Pokud chcete přehrát jen jednu stopu, tak ji vyberte a klikněte na <guibutton>Přehrát</guibutton> nebo na ni prostě klikněte dvojitě.</para>
+
+    <para>Během přehrávání CD změní <application>Sound Juicer</application> tlačítko <guibutton>Přehrát</guibutton> na tlačítko <guibutton>Pozastavit</guibutton>. Kdykoliv během přehrávání na něj můžete kliknout a přehrávání se pozastaví, kliknutím na <guibutton>Přehrát</guibutton> bude pokračovat přehrávání dále.</para>
+
+    <para>V průběhu přehrávání zobrazuje <application>Sound Juicer</application> ukazatel průběhu představující pozici v aktuální stopě. Pokud se chcete přesunout na jiné místo stopy, přesuňte ukazatel pomocí myši.</para>
+  </section>
+
+  <section id="preferences">
+    <title>Předvolby</title>
+
+    <para>V okně s předvolbami můžete určit:</para>
+
+    <itemizedlist>
+      <listitem><para>Kterou mechaniku CD má <application>Sound Juicer</application> používat v případě, že máte více mechanik.</para></listitem>
+      <listitem><para>Zda se má nebo nemá CD vysunout, až <application>Sound Juicer</application> dokončí extrahování.</para></listitem>
+      <listitem><para>Zda se má nebo nemá otevřít složka s hudbou, až <application>Sound Juicer</application> dokončí extrahování.</para></listitem>
+      <listitem><para>Kam sem mají ve vašem počítači ukládat extrahované zvukové soubory.</para></listitem>
+      <listitem><para>Jaký systém hierarchie složek se má použít ve složce s hudbou.</para></listitem>
+      <listitem><para>Jaký formát se má použít pro názvy stop extrahovaných zvukových souborů.</para></listitem>
+      <listitem><para>Jaký formát souboru a kodek se mají použít pro extrahované zvukové soubory.</para></listitem>
+    </itemizedlist>
+
+    <informalfigure>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/prefs.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase>Okno s předvolbami</phrase>
+          </textobject>
+        </mediaobject>
+      </screenshot>
+    </informalfigure>
+
+    <section id="prefs-drive">
+      <title>Výběr mechaniky CD</title>
+
+      <para>Pokud máte ve vašem počítači více mechanik CD, můžete si ve vyskakovacím seznamu <guilabel>Mechanika CD</guilabel> v části <guilabel>Zařízení</guilabel> vybrat, která se má použít. Pomocí <guibutton>Po dokončení vysunout CD z mechaniky</guibutton> a <guibutton>Po dokončení otevřít složku s hudbou</guibutton> si můžete vybrat, zda se má CD z mechaniky vysunout a zda se má případně otevřít složka s hudbou, až se extrahování zvukových souborů dokončí.</para>
+    </section>
+
+    <section id="prefs-naming">
+      <title>Pojmenovávání zvukových souborů</title>
+
+      <para>Ve vyskakovacím seznamu <guilabel>Složka</guilabel> v části <guilabel>Hudební složka</guilabel> si můžete vybrat, do které složky chcete ukládat zvukové soubory. Vyberte si jednu ze složek v seznamu nebo zvolte <guilabel>Jiné</guilabel> pro výběr pomocí dialogu na výběr souboru. Jako výchozí místo pro ukládání je zvolená složka <filename>Hudba</filename> ve vaší domovské složce.</para>
+
+      <para>V části <guilabel>Názvy stop</guilabel> můžete určit, jak budou soubory a složky pojmenované. <application>Sound Juicer</application> umí ukládat soubory do oddělených složek, což vám pomáhá v organizování vaší hudby. Můžete si ve vyskakovacím seznamu <guilabel>Hierarchie složek</guilabel> vybrat, jak se tyto složky vytváří a pojmenovávají, . Ve výchozím stavu vytváří <application>Sound Juicer</application> složku pro umělce a podsložku pro album.</para>
+
+      <para>K určení, jak mají vypadat názvy zvukových souborů, použijte vyskakovací seznam <guilabel>Název souboru</guilabel>. Jako výchozí používá <application>Sound Juicer</application> číslo stopy následované pomlčkou a názvem stopy.</para>
+
+      <para>Můžete zapnout volbu <guibutton>Odstranit speciální znaky</guibutton>, aby <application>Sound Juicer</application> při vytváření názvů souborů odstraňoval nebo nahrazoval znaky, jako jsou mezery nebo znaménka. To je užitečné, pokud hodláte nahrát zvukové soubory do přenosného zařízení nebo jiného počítač, který má větší omezení na názvy souborů.</para>
+
+      <note><para>I když nemáte vybrané <guibutton>Odstranit speciální znaky</guibutton>, aplikace <application>Sound Juicer</application> bude odstraňovat z názvů souborů znak <literal>/</literal>. Tento znak se nesmí používat v názvech souborů v Unixu, Linuxu a příbuzných systémech.</para></note>
+
+      <tip><para>Na konci části <guilabel>Názvy stop</guilabel> je uvedený příklad. Ukazuje vám, jak může název souboru vypadat a kde může být soubor umístěný, v závislosti na vašem nastavení voleb <guilabel>Hierarchie složek</guilabel>, <guilabel>Název souboru</guilabel> a <guibutton>Odstranit speciální znaky</guibutton>.</para></tip>
+    </section>
+
+    <section id="prefs-format">
+      <title>Výběr formátu</title>
+
+      <para>Můžete si vybrat, který zvukový formát použije aplikace <application>Sound Juicer</application> k uložení stop na váš počítač. Dostupných je několik formátů, z nichž každý má své výhody. Dostupné formáty na vašem počítači mohou být různé, ale obvykle mezi nimi najdete následující:</para>
+
+      <variablelist>
+        <varlistentry>
+          <term>CD kvalita, ztrátový (Ogg multimedia)</term>
+          <listitem>
+            <para>Tato volba je vybraná jako výchozí. <ulink url="http://www.vorbis.org/">Ogg Vorbis</ulink>, podobně jako další ztrátové zvukové formáty (např. MP3 a AAC) zahazuje některé informace z původních zvukových dat. Ačkoliv není zvukový soubor dokonalou replikou zvuku na CD, rozdíly nejsou pro většinu posluchačů postřehnutelné. A jako výsledek přináší ztrátové formáty objemově velmi malé soubory.</para>
+
+            <para>Formát Ogg Vorbis je výchozí ztrátový formát používaný v aplikaci <application>Sound Juicer</application>. Ogg Vorbis je otevřený formát vyvinutý <ulink url="http://xiph.org/">Xiph.Org Foundation</ulink>, který produkuje velikostně menší soubory a vyšší kvalitu zvuku, než mnoho dalších ztrátových formátů. Ačkoliv není tak rozšířený jako starší formát MP3, většina hudebního software umí soubory Ogg Vorbis přehrát a mnoho hardwarových přehrávačů má začleněnou podporu.</para>
+
+            <para>Xiph.Org udržuje seznam <ulink url="http://wiki.xiph.org/index.php/VorbisSoftwarePlayers">softwarových přehrávačů</ulink>, <ulink url="http://wiki.xiph.org/index.php/PortablePlayers">přenosných hardwarových přehrávačů</ulink> a <ulink url="http://wiki.xiph.org/index.php/StaticPlayers">stolních hardwarových přehrávačů</ulink>, které podporují Ogg Vorbis.</para>
+          </listitem>
+        </varlistentry>
+
+        <varlistentry>
+          <term>CD kvalita, bezztrátový (FLAC audio)</term>
+          <listitem>
+            <para>Zvukový formát <ulink url="http://flac.sourceforge.net/">FLAC</ulink> je bezztrátový formát. Při převodu do FLAC se žádná zvuková data neztrácí, a to i přestože komprimuje zvukové soubory až o 70%. FLAC a další bezztrátové formáty jsou oblíbené v případech, kdy je vyžadovaná vysoká věrnost zvuku, ale přitom musí být soubory komprimované kvůli úspoře místa na disku nebo rychlosti přenosu přes síť.</para>
+          </listitem>
+        </varlistentry>
+
+        <varlistentry>
+          <term>CD kvalita, AAC (MPEG-4 audio)</term>
+          <listitem>
+            <para>Zvukový formát AAC (zkratka pro Advanced Audio Coding) je standardizovaný ztrátový formát. Jedná se o předchůdce formátu MP3 a dosahuje lepší zvukové kvality než formát MP3. Spousta softwarových a hardwarových přehrávačů formát AAC podporuje.</para>
+          </listitem>
+        </varlistentry>
+
+        <varlistentry>
+          <term>Hlas, bezztrátový (WAV audio)</term>
+          <listitem>
+            <para>Profil hlasového výstupu produkuje mono zvukové soubory v nízké kvalitě. Můžete jej volit pro výukové kurzy, zvukové knihy a jiná CD s mluveným slovem, kde ztráta zvukové kvality není až tak podstatná.</para>
+          </listitem>
+        </varlistentry>
+        
+<varlistentry>
+          <term>MP3</term>
+          <listitem>
+            <para>Formát MP3 je ztrátový formát. Je široce podporovaný a populární, hlavně díky tomu, že je používají přenosné přehrávače.</para>
+          </listitem>
+        </varlistentry>
+
+      </variablelist>
+
+      <para>Můžete kliknout na tlačítko <guibutton>Upravit profily</guibutton> a upravit si dostupné zvukové formáty. Dialogové okno Upravit profily zvuku poskytuje přímý přístup ke zvukovým převodům. Profily jsou definované přes propojení na <application>GStreamer</application>. <application>GStreamer</application> je podpůrná multimediální knihovna používaná aplikací <application>Sound Juicer</application> a dalšími multimediálními aplikacemi. Podrobné vysvětlení zvukových profilů přesahuje rámec tohoto dokumentu.</para>
+    </section>
+  </section>
+
+</article>

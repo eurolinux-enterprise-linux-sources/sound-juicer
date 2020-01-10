@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<legalnotice id="legalnotice">
+	<para>Permissão concedida para copiar, distribuir e/ou modificar este documento sob os termos da Licença de Documentação Livre GNU (GFDL), Versão 1.1 ou algum versão posterior publicada pela Free Software Foundation sem Seções Invariantes, sem Textos Frontais de Capa e sem Textos de Contracapa. Você pode encontrar uma cópia da GFDL neste <ulink type="help" url="ghelp:fdl">link</ulink> ou no arquivo COPYING-DOCS distribuído com este manual.</para>
+         <para>Este manual é parte de uma coleção dos manuais do GNOME distribuídos sob a GFDL. Se você quiser distribuir este manual separado da coleção, você pode fazê-lo adicionando uma cópia da licença ao manual, como descrito na seção 6 da licença.</para>
+
+	<para>Muitos dos nomes usados por companhias para distinguir seus produtos e serviços são reivindicados como marcas registradas. Onde esses nomes aparecem em qualquer documentação do GNOME, e os membros do Projeto de Documentação do GNOME estiverem cientes deles, eles estarão em letras maiúsculas ou com iniciais em maísculas.</para>
+
+	<para>O DOCUMENTO E AS VERSÕES MODIFICADAS DO DOCUMENTO SÃO FORNECIDAS SOB OS TERMOS DA LICENÇA DE DOCUMENTAÇÃO LIVRE GNU COM A COMPREENSÃO DE QUE: <orderedlist>
+		<listitem>
+		  <para>O DOCUMENTO É FORNECIDO NA BASE "COMO ESTÁ", SEM GARANTIA DE QUALQUER TIPO, EXPRESSO OU IMPLÍCITO, INCLUINDO, SEM LIMITAÇÃO, AS GARANTIAS DE QUE O DOCUMENTO OU VERSÃO MODIFICADA DO DOCUMENTO É COMERCIALIZADO COMO LIVRE DE DEFEITOS, APROPRIADO PARA UMA FINALIDADE PARTICULAR OU NÃO INFRINGINDO. TODO O RISCO A RESPEITO DA QUALIDADE, EXATIDÃO E DO DESEMPENHO DO DOCUMENTO OU DA VERSÃO MODIFICADA DO DOCUMENTO É DE SUA RESPONSABILIDADE. SE TODO O DOCUMENTO OU VERSÃO MODIFICADA APRESENTAR DEFEITOS EM QUALQUER ASPECTO, VOCÊ (NÃO O ESCRITOR INICIAL, AUTOR OU ALGUM CONTRIBUINTE) ASSUME O CUSTO DE QUALQUER SERVIÇO NECESSÁRIO, REPARO OU CORREÇÃO. ESTA NOTA DE EXONERAÇÃO DE GARANTIA CONSTITUI UMA PARTE ESSENCIAL DESTA LICENÇA. NENHUM USO DE QUALQUER DOCUMENTO OU VERSÃO MODIFICADA DO DOCUMENTO ESTÁ AUTORIZADA AQUI EXCETO SOB ESTE AVISO DE EXONERAÇÃO; E</para>
+		</listitem>
+		<listitem>
+		  <para>SOB NENHUMA CIRCUNSTÂNCIA E SOB NENHUMA TEORIA LEGAL, EM CASO DE PREJUÍZO (INCLUINDO NEGLIGÊNCIA), CONTRATO OU, DE OUTRA MANEIRA, DEVEM O AUTOR, O ESCRITOR INICIAL, QUALQUER CONTRIBUINTE OU QUALQUER DISTRIBUIDOR DO DOCUMENTO OU VERSÃO MODIFICADA DO DOCUMENTO OU QUALQUER FORNECEDOR DE ALGUMAS DE TAIS PARTES, SER LEGALMENTE RESPONSÁVEL POR ALGUMA PESSOA POR ALGUM DANO DIRETOS, INDIRETOS, ESPECIAIS, INCIDENTAIS OU EM CONSEQUÊNCIA DE QUALQUER TIPO, INCLUINDO, SEM LIMITAÇÃO, DANOS POR PERDA DE BOA VONTADE, PARADA DE TRABALHO, FALHA OU MAU FUNCIONAMENTO DO COMPUTADOR OU TODO E QUALQUER OUTROS DANOS OU PERDAS RESULTANTES DE OU RELACIONADOS AO USO DO DOCUMENTO E DAS VERSÕES MODIFICADAS DO DOCUMENTO, MESMO SE TAIS PARTES TIVEREM SIDO INFORMADAS DA POSSIBILIDADE DE TAIS DANOS.</para>
+		</listitem>
+	  </orderedlist></para>
+  </legalnotice>

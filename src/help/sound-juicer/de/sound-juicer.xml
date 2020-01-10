@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- -*- indent-tabs-mode: nil -*- -->
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN" "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd" [
+<!ENTITY app "Sound Juicer">
+<!ENTITY application "<application>&app;</application>">
+<!ENTITY appversion "2.22.0">
+<!ENTITY manrevision "2.22.0">
+<!ENTITY musicbrainz "<ulink url='http://www.musicbrainz.org/'>MusicBrainz</ulink>">
+]>
+<?gnome-doc-status Version: 2.12
+Status: Draft
+?>
+<article id="index" lang="de">
+  <articleinfo>
+    <title><application>Sound Juicer</application>-Handbuch</title>
+    
+    <copyright>
+      <year>2003</year>
+      <holder>Mike Hearn (mike@theoretic.com)</holder>
+    </copyright>
+    <copyright>
+      <year>2005</year>
+      <holder>Shaun McCance</holder>
+    </copyright>
+    <copyright>
+      <year>2008</year>
+      <holder>Andreas Freund</holder>
+    </copyright><copyright><year>2007</year><holder>Thomas Konstantinides (gntr1@tkonstantinides.de)</holder></copyright><copyright><year>2008, 2009</year><holder>Mario Blättermann (mariobl@gnome.org)</holder></copyright>
+    
+    <publisher>
+      <publishername>GNOME-Dokumentationsprojekt</publishername>
+    </publisher>
+
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+
+    <authorgroup>
+      <author>
+        <firstname>Andreas</firstname>
+        <surname>Freund</surname>
+        <affiliation>
+          <orgname>Google Highly Open Participation Contest</orgname>
+        </affiliation>
+      </author>
+      <author>
+        <firstname>Mike</firstname>
+        <surname>Hearn</surname>
+        <email>mike@theoretic.com</email>
+      </author>
+      <author role="maintainer">
+        <firstname>Shaun</firstname>
+        <surname>McCance</surname>
+        <affiliation>
+          <orgname>GNOME-Dokumentationsprojekt</orgname>
+        </affiliation>
+        <email>shaunm@gnome.org</email>
+      </author>
+    </authorgroup>
+
+    <revhistory>
+      <revision>
+        <revnumber>2.22.0</revnumber>
+        <date>12. Januar 2008</date>
+        <revdescription>
+          <para role="author">Andreas Freund</para>
+          <para role="publisher">GNOME-Dokumentationsprojekt</para>
+        </revdescription>
+      </revision>
+      <revision>
+        <revnumber>2.10</revnumber>
+        <date>6. März 2005</date>
+        <revdescription>
+          <para role="author">Shaun McCance</para>
+          <para role="publisher">GNOME-Dokumentationsprojekt</para>
+        </revdescription>
+      </revision>
+      <revision>
+        <revnumber>2.0</revnumber>
+        <date>6. Juli 2003</date>
+        <revdescription>
+          <para role="author">Mike Hearn <email>mike@theoretic.com</email></para>
+          <para role="publisher">GNOME-Dokumentationsprojekt</para>
+        </revdescription>
+      </revision>
+    </revhistory>
+    <!-- Translators may also add here feedback address for translations -->
+
+    <abstract role="description">
+      <para><application>Sound Juicer</application> ist ein einfaches und geschicktes Werkzeug, um CDs auszulesen. Es erlaubt Ihnen, den Ton von Audio-CDs zu extrahieren und diese in Audiodateien umzuwandeln, die Ihr Rechner verstehen und abspielen kann.</para>
+    </abstract>
+  </articleinfo>
+
+  <section id="intro">
+    <title>Einleitung</title>
+    <anchor id="aboutex"/>
+    <anchor id="notice"/>
+    <indexterm>
+      <primary>Sound Juicer</primary>
+      <secondary>Handbuch</secondary>
+      <tertiary>sound-juicer</tertiary>
+    </indexterm>
+
+    <para><application>Sound Juicer</application> ist ein einfaches und geschicktes Werkzeug, um CDs auszulesen. Es erlaubt Ihnen, den Ton von Audio CDs zu extrahieren und diese in Audio-Dateien umzuwandeln, die Ihr Rechner verstehen und abspielen kann. <application>Sound Juicer</application> kann die Audio-Titel außerdem direkt von CD abspielen, und erlaubt Ihnen so die CD vorzuhören, bevor Sie sie auslesen.</para>
+
+    <para><application>Sound Juicer</application> wurde als einfach benutzbare Anwendung entworfen, die nur wenige Benutzereingriffe erfordert. Wenn Sie <application>Sound Juicer</application> starten, wird er die CD im Laufwerk untersuchen und versuchen, Informationen über die Audio-Titel herauszufinden, indem er den frei verfügbaren <ulink url="http://www.musicbrainz.org/">MusicBrainz</ulink>-Dienst benutzt.</para>
+
+    <informalfigure>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/startup.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase><application>Sound Juicer</application> beim Start</phrase>
+          </textobject>
+        </mediaobject>
+      </screenshot>
+    </informalfigure>
+  </section>
+
+  <section id="track-data">
+    <title>Eingabe der Titelinformationen</title>
+
+    <para>Wenn Sie eine Audio-CD einlegen, wird <application>Sound Juicer</application> automatisch Informationen über die Titel von <ulink url="http://www.musicbrainz.org/">MusicBrainz</ulink> abrufen. <ulink url="http://www.musicbrainz.org/">MusicBrainz</ulink> ist ein freier Dienst, der eine Datenbank mit Daten über die meisten veröffentlichten CDs bereitstellt. <application>Sound Juicer</application> benutzt die Seriennummer der CD, sowie Position und Länge der Titel, um die zur CD passenden Informationen in der <ulink url="http://www.musicbrainz.org/">MusicBrainz</ulink> Datenbank zu finden.</para>
+
+    <para>Gelegentlich kann mehr als eine CD denselben Aufbau haben. Falls mehr als eine CD gefunden wird, so zeigt <application>Sound Juicer</application> einen Dialog an, der es Ihnen ermöglicht, auszuwählen welche CD-Daten benutzt werden sollen. Falls die falsche CD erkannt wird oder falls <ulink url="http://www.musicbrainz.org/">MusicBrainz</ulink> keine passenden CDs kennt, müssen Sie die Titelinformationen manuell eingeben. Es ist auch möglich, <ulink url="http://www.musicbrainz.org/">MusicBrainz</ulink> die Informationen für die CD über das erscheinende Banner mitzuteilen.</para>
+
+    <para>In der oberen Hälfte des Fensters befinden sich Textfelder für den Titel, den Interpreten und das Genre der CD. Darunter ist eine Liste der Musik-Titel auf der CD. Sie können Titelnummer, Titel und Interpret für jeden Titel angeben. <application>Sound Juicer</application> benutzt diese Informationen, um die Dateien und Ordner, in denen die Musik gespeichert wird, zu benennen. Die Titel- und Albuminformationen werden außerdem direkt in die Audiodateien kodiert. Viele Abspielgeräte, tragbare Geräte eingeschlossen, benutzen diese Informationen, um die Audiodateien zu organisieren und sie anzuzeigen.</para>
+
+    <para>Um den Titel eines Musikstücks zu bearbeiten, wählen Sie erst das Musikstück aus, und klicken dann auf den Titel. Wenn Sie mit der Eingabe fertig sind, drücken sie die <keycap>Eingabetaste</keycap> auf ihrer Tastatur oder klicken Sie in einen Bereich außerhalb des Titels.</para>
+
+    <para>Wenn Sie den Interpreten für die CD bearbeiten, wird die Information über den Interpreten für jeden Titel automatisch aktualisiert, aber nur dann, wenn die Interpreten bereits vorher übereinstimmten (so dass die Änderung des Album-Interpreten nicht die Änderung der Interpreten der einzelnen Titel zur Folge hat). Die meisten CDs stammen von einem einzelnen Interpreten, so dass diese Funktion ihnen die Zeit erspart, den Interpreten für jeden Titel einzugeben.</para>
+
+    <para>Einige CDs sind allerdings Zusammenstellungen von Liedern von verschiedenen Interpreten. Für diese CDs müssen Sie den Interpreten für jeden Titel eingeben. Um den Interpreten für einen Titel einzugeben wählen Sie zuerst den Titel aus und klicken dann auf den Interpreten. Sie können für den Interpreten der CD einen Wert wie »Verschiedene« eingeben, oder das Feld einfach leer lassen, je nachdem wie Sie Ihre Musik gerne organisieren.</para>
+
+    <tip>
+      <title>Eingabe der Titelinformationen nur über die Tastatur</title>
+      <para>Sie können Titelinformationen eingeben, ohne die Maus zu verwenden. Mit <keycap>Pfeiltaste hoch</keycap> und <keycap>Pfeiltaste runter</keycap> wählen Sie einen Titel aus, mit <keycap>Pfeiltaste links</keycap> und <keycap>Pfeiltaste rechts</keycap> einen Namen oder Interpreten. Drücken Sie die <keycap>Leertaste</keycap>, um mit dem Bearbeiten des Titels oder Interpreten zu beginnen. Drücken Sie die <keycap>Eingabetaste</keycap>, sobald Sie fertig sind.</para>
+    </tip>
+
+    <para>Leider stellt <ulink url="http://www.musicbrainz.org/">MusicBrainz</ulink> keine Daten über das Genre bereit, aber <application>Sound Juicer</application> bietet eine Liste mit einigen Genres an.</para>
+
+    <anchor id="genres"/>
+    <itemizedlist>
+      <listitem><para>Ambient</para></listitem>
+      <listitem><para>Blues</para></listitem>
+      <listitem><para>Klassik</para></listitem>
+      <listitem><para>Country</para></listitem>
+      <listitem><para>Dance</para></listitem>
+      <listitem><para>Electronica</para></listitem>
+      <listitem><para>Folk</para></listitem>
+      <listitem><para>Funk</para></listitem>
+      <listitem><para>Jazz</para></listitem>
+      <listitem><para>Latin</para></listitem>
+      <listitem><para>Pop</para></listitem>
+      <listitem><para>Rap</para></listitem>
+      <listitem><para>Reggae</para></listitem>
+      <listitem><para>Rock</para></listitem>
+      <listitem><para>Soul</para></listitem>
+      <listitem><para>Spoken Word</para></listitem>
+    </itemizedlist>
+
+    <tip><para>Falls Sie sich dafür entscheiden, ein benutzerdefiniertes Genre zu erstellen, wird dieses auch zukünftig verfügbar sein.</para></tip>
+
+  </section>
+
+  <section id="extracting">
+    <title>Auslesen</title>
+    <anchor id="using"/>
+
+    <para>Standardmäßig wandelt <application>Sound Juicer</application> alle Titel der CD in Audiodateien um. Falls Sie nicht alle Titel umwandeln möchten, können sie mit Hilfe der Ankreuzfelder in der ersten Spalte der Titelliste kontrollieren, welche Titel umgewandelt werden. Nur die Titel, die Sie ausgewählt haben, werden umgewandelt.</para>
+
+    <para>Sie können auch die Menüpunkte <menuchoice><guimenu>Bearbeiten</guimenu><guimenuitem>Alles auswählen</guimenuitem></menuchoice> und <menuchoice><guimenu>Bearbeiten</guimenu><guimenuitem>Alles abwählen</guimenuitem></menuchoice> benutzen, um alle oder keinen Titel zum Umwandeln auszuwählen.</para>
+
+    <para>Wenn Sie alle Informationen eingegeben haben, die Sie benötigen, klicken Sie auf den <guibutton>Auslesen</guibutton>-Knopf oder drücken Sie <keycombo><keycap>Strg</keycap><keycap>Enter</keycap></keycombo>. <application>Sound Juicer</application> wird dann beginnen, die Musik von der CD zu lesen, und sie als Dateien auf ihrem Rechner zu speichern. Standardmäßig werden die Audiodateien im <filename>Musik</filename>-Ordner in Ihrem persönlichen Ordner gespeichert.</para>
+
+    <para>Wenn Sie mit dem Auslesen beginnen, wird sich der <guibutton>Auslesen</guibutton>-Knopf in einen <guibutton>Stopp</guibutton>-Knopf verwandeln. Sie können jederzeit auf diesen Knopf klicken, um das Auslesen zu beenden.</para>
+
+    <para><application>Sound Juicer</application> zeigt an, welcher Titel gerade ausgelesen wird, indem ein Symbol neben der Titelnummer angezeigt wird. Sie können außerdem den Gesamtfortschritt und die geschätzte verbleibende Zeit in der Statusleiste im unteren Teil des Fensters sehen.</para>
+
+    <para>Das Auslesen einer CD kann abhängig von der Geschwindigkeit Ihres Rechners eine lange Zeit dauern. Sie können <application>Sound Juicer</application> gefahrlos minimieren oder zu einer anderen Arbeitsfläche wechseln, um Ihren Rechner weiter zu benutzen, während die Musik ausgelesen wird.</para>
+  </section>
+
+  <section id="playing">
+    <title>Wiedergabe</title>
+
+    <para><application>Sound Juicer</application> erlaubt es Ihnen, die Titel auf Ihrer CD direkt abzuspielen. Um das Abspielen zu starten, klicken Sie einfach auf den <guibutton>Wiedergabe</guibutton>-Knopf oder drücken Sie <keycombo><keycap>Strg</keycap><keycap>P</keycap></keycombo>. Um einen bestimmten Titel abzuspielen, wählen Sie diesen Titel aus und klicken Sie dann auf <guibutton>Wiedergabe</guibutton> oder führen Sie einfach einen Doppelklick auf den Titel aus.</para>
+
+    <para>Wenn <application>Sound Juicer</application> eine CD abspielt, ändert sich der <guibutton>Wiedergabe</guibutton>-Knopf in einen <guibutton>Pause</guibutton>-Knopf. Sie können diesen jederzeit anklicken, um das Abspielen zu unterbrechen, und Sie können wieder auf <guibutton>Wiedergabe</guibutton> klicken, um das Abspielen an der Stelle fortzusetzen, an der Sie die Wiedergabe angehalten hatten.</para>
+
+    <para>Während des Abspielens zeigt <application>Sound Juicer</application> eine Fortschrittsleiste an, die die Position im gerade abgespielten Stück darstellt. Um einen Teil des Liedes zu überspringen, ziehen Sie den Regler entlang der Fortschrittsleiste.</para>
+  </section>
+
+  <section id="preferences">
+    <title>Einstellungen</title>
+
+    <para>Das Einstellungsfenster erlaubt es Ihnen, folgendes zu kontrollieren:</para>
+
+    <itemizedlist>
+      <listitem><para>Welches CD Laufwerk von <application>Sound Juicer</application> benutzt wird, falls Sie mehr als ein Laufwerk besitzen,</para></listitem>
+      <listitem><para>Ob <application>Sound Juicer</application> die CD auswirft, wenn das Auslesen beendet ist,</para></listitem>
+      <listitem><para>Ob der Musikordner geöffnet werden soll, wenn <application>Sound Juicer</application> das Auslesen beendet hat,</para></listitem>
+      <listitem><para>Wo die ausgelesenen Audiodateien auf Ihrem Rechner abgelegt werden,</para></listitem>
+      <listitem><para>Welches System für die Ordnerhierarchie im Musikordner verwendet wird,</para></listitem>
+      <listitem><para>Welches Format für die Namen der ausgelesenen Audiodateien benutzt wird, und</para></listitem>
+      <listitem><para>Welches Dateiformat und welcher Codec für das Auslesen der Audiodateien benutzt wird.</para></listitem>
+    </itemizedlist>
+
+    <informalfigure>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/prefs.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase>Einstellungen-Fenster</phrase>
+          </textobject>
+        </mediaobject>
+      </screenshot>
+    </informalfigure>
+
+    <section id="prefs-drive">
+      <title>Auswählen eines CD-Laufwerks</title>
+
+      <para>Falls Sie mehrere CD-Laufwerke in Ihrem Rechner haben, ermöglicht es Ihnen das Auswahlfeld, das mit <guilabel>CD-Laufwerk</guilabel> beschriftet ist, das zu benutzende Laufwerk auszuwählen. Das Ankreuzfeld <guibutton>Nach dem Auslesen auswerfen</guibutton> ermöglicht es Ihnen zu kontrollieren, ob <application>Sound Juicer</application> die CD aus dem Laufwerk auswirft, wenn das Auslesen der Audiodateien beendet ist, beziehungsweise dann den Musikordner zu öffnen.</para>
+    </section>
+
+    <section id="prefs-naming">
+      <title>Benennen von Audio Dateien</title>
+
+      <para>Das <guilabel>Musikordner</guilabel>-Auswahlfeld gibt Ihnen die Möglichkeit auszuwählen, in welchem Ordner Ihre Audiodateien gespeichert werden sollen. Wählen Sie einen der Ordner aus der Liste aus, oder wählen Sie <guilabel>Andere</guilabel>, um einen anderen Ordner im Dateiauswahldialog zu wählen. Standardmäßig werden Dateien im <filename>Musik</filename>-Ordner in Ihrem persönlichen Ordner abgelegt.</para>
+
+      <para>Der Abschnitt <guilabel>Titel</guilabel> gibt Ihnen die Möglichkeit zu bestimmen, wie die Ordner und Dateien benannt werden. <application>Sound Juicer</application> kann Audiodateien in unterschiedlichen Ordnern speichern, und hilft Ihnen so, Ihre Musik zu organisieren. Sie können auswählen, wie diese Ordner erstellt und benannt werden, indem Sie das <guilabel>Ordnerhierarchie</guilabel>-Auswahlfeld benutzen. Standardmäßig erstellt <application>Sound Juicer</application> einen Ordner für den Interpreten des Albums und einen Unterordner für das Album.</para>
+
+      <para>Benutzen Sie die <guilabel>Dateiname</guilabel>-Auswahlliste, um zu entscheiden, wie die Audiodateien benannt werden. Standardmäßig benutzt <application>Sound Juicer</application> die Titelnummer, gefolgt von einem Bindestrich und dem Namen des Titels.</para>
+
+      <para>Wählen Sie das Ankreuzfeld <guibutton>Sonderzeichen entfernen</guibutton>, um <application>Sound Juicer</application> Zeichen wie Leerzeichen oder Satzzeichen in den Dateinamen entfernen zu lassen. Das ist dann nützlich, wenn Sie planen, die Audiodateien auf ein tragbares Abspielgerät oder auf einen Rechner, der größere Einschränkungen für Dateinamen hat, zu überspielen.</para>
+
+      <note><para>Auch wenn <guibutton>Sonderzeichen entfernen</guibutton> nicht ausgewählt ist, wird <application>Sound Juicer</application> das Zeichen <literal>/</literal> aus Dateinamen entfernen. Dieses Zeichen darf unter UNIX, Linux und ähnlichen Systemen nicht in Dateinamen benutzt werden.</para></note>
+
+      <tip><para>Im unteren Bereich des Abschnitts <guilabel>Titel</guilabel> wird ein Beispielpfad dargestellt. Hier sehen Sie, wie ein Dateiname aussehen wird und wo die Datei gespeichert wird, entsprechend Ihrer Einstellungen bezüglich <guilabel>Ordnerhierarchie</guilabel>, <guilabel>Dateiname</guilabel>, und <guibutton>Sonderzeichen entfernen</guibutton>.</para></tip>
+    </section>
+
+    <section id="prefs-format">
+      <title>Auswahl des Formats</title>
+
+      <para>Sie können auswählen, welches Audiodateiformat <application>Sound Juicer</application> benutzt, um die Titel auf Ihrem Rechner zu speichern. Es gibt einige verfügbare Formate, mit jeweiligen Vorteilen. Die möglichen Formate auf Ihrem Rechner können sich von Fall zu Fall unterscheiden, jedoch sind die folgenden Möglichkeiten normalerweise vorhanden:</para>
+
+      <variablelist>
+        <varlistentry>
+          <term>CD-Qualität, verlustbehaftet (Ogg Multimedia)</term>
+          <listitem>
+            <para>Diese Option ist standardmäßig ausgewählt. <ulink url="http://www.vorbis.org/">Ogg Vorbis</ulink> verwirft wie andere verlustbehaftete Audioformate (wie MP3 und AAC) einige Informationen aus den originalen Audiodaten. Obwohl die Audiodatei keine perfekte Replik der Audiodaten auf der CD ist, ist der Unterschied für die meisten Hörer nicht zu erkennen. Als Ergebnis haben verlustbehaftete Formate meist sehr kleine Dateigrößen.</para>
+
+            <para>Das Ogg Vorbis Format ist das standardmäßig in <application>Sound Juicer</application> verwendete verlustbehaftete Format. Ogg Vorbis ist ein offenes Format, das von der <ulink url="http://xiph.org/">Xiph.Org-Stiftung</ulink> entwickelt wurde und darauf abzielt, kleinere Dateigrößen und eine höhere Audioqualität als viele andere verlustbehaftete Formate zu erzeugen. Obwohl es nicht so weit verbreitet ist wie das ältere MP3 Format, kann es von den meisten Musikprogrammen abgespielt werden und wird von vielen Abspielgeräten unterstützt.</para>
+
+            <para>Xiph.Org pflegt Listen über <ulink url="http://wiki.xiph.org/index.php/VorbisSoftwarePlayers">Musikprogramme</ulink>, <ulink url="http://wiki.xiph.org/index.php/PortablePlayers">tragbare Abspielgeräte</ulink> und <ulink url="http://wiki.xiph.org/index.php/StaticPlayers">stationäre Abspielgeräte</ulink>, die Ogg Vorbis unterstützen.</para>
+          </listitem>
+        </varlistentry>
+
+        <varlistentry>
+          <term>CD-Qualität, Verlustfrei (FLAC audio)</term>
+          <listitem>
+            <para>Das <ulink url="http://flac.sourceforge.net/">FLAC</ulink> Audioformat ist ein verlustfreies Format. Keine Audiodaten gehen verloren, wenn man ins FLAC Format konvertiert, wobei die Audiodateien trotzdem um bis zu 70% komprimiert werden. FLAC und weitere verlustfreie Formate sind dann beliebt, wenn eine hohe Klangtreue benötigt wird, aber Dateien komprimiert werden müssen, um Speicherplatz und Netzwerktransfer-Zeiten zu sparen.</para>
+          </listitem>
+        </varlistentry>
+
+        <varlistentry>
+          <term>CD-hQualität, AAC (MPEG-4-Audio)</term>
+          <listitem>
+            <para>Das AAC-Format (Abkürzung für Advanced Audio Coding) ist ein standardisiertes verlustbehaftetes Format. Es ist der Nachfolger des MP3-Formats und erzielt eine bessere Klangqualität als dieses. Das AAC-Format wird von vielen Abspielprogrammen und -geräten unterstützt.</para>
+          </listitem>
+        </varlistentry>
+
+        <varlistentry>
+          <term>Sprache, verlustfrei (WAV-Audio)</term>
+          <listitem>
+            <para>Das Sprachausgabe-Profil erzeugt Mono-Audiodateien in niedriger Qualität. Sie können dieses Format für Vorträge, Hörbücher und weitere Sprache-CDs verwenden, bei denen der Verlust an Audioqualität weniger wichtig ist.</para>
+          </listitem>
+        </varlistentry>
+        
+<varlistentry>
+          <term>mp3</term>
+          <listitem>
+            <para>Das MP3-Audioformat ist ein verlustbehaftetes Format. Es ist sehr populär und wird auf breiter Basis unterstützt, speziell für die Verwendung auf tragbaren Medien-Abspielgeräten.</para>
+          </listitem>
+        </varlistentry>
+
+      </variablelist>
+
+      <para>Sie können den <guibutton>Profile bearbeiten</guibutton> Knopf anklicken, um die verfügbaren Audioformate zu bearbeiten. Der »Profile bearbeiten«-Dialog gibt Ihnen direkten Zugriff auf die Audio-Umwandlung. Profile sind über <application>GStreamer</application>-Pipelines definiert. <application>GStreamer</application> ist die Multimedia-Programmbibliothek, die <application>Sound Juicer</application> und anderen Multimedia-Anwendungen zugrunde liegt. Eine ausführliche Erklärung der Audioprofile liegt außerhalb des Rahmens dieses Dokuments.</para>
+    </section>
+  </section>
+
+</article>

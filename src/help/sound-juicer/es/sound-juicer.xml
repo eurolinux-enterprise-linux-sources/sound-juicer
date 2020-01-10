@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- -*- indent-tabs-mode: nil -*- -->
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN" "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd" [
+<!ENTITY app "Sound Juicer">
+<!ENTITY application "<application>&app;</application>">
+<!ENTITY appversion "2.22.0">
+<!ENTITY manrevision "2.22.0">
+<!ENTITY musicbrainz "<ulink url='http://www.musicbrainz.org/'>MusicBrainz</ulink>">
+]>
+<?gnome-doc-status Version: 2.12
+Status: Draft
+?>
+<article id="index" lang="es">
+  <articleinfo>
+    <title>Manual de <application>Sound Juicer</application></title>
+    
+    <copyright>
+      <year>2003</year>
+      <holder>Mike Hearn (mike@theoretic.com)</holder>
+    </copyright>
+    <copyright>
+      <year>2005</year>
+      <holder>Shaun McCance</holder>
+    </copyright>
+    <copyright>
+      <year>2008</year>
+      <holder>Andreas Freund</holder>
+    </copyright><copyright><year>2005, 2008.</year><holder>Jorge González (jorgegonz@svn.gnome.org)</holder></copyright><copyright><year>2006.</year><holder>Francisco Javier F. Serrador (serrador@cvs.gnome.org)</holder></copyright>
+    
+    <publisher>
+      <publishername>Proyecto de documentación de Gnome</publishername>
+    </publisher>
+
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+
+    <authorgroup>
+      <author>
+        <firstname>Andreas</firstname>
+        <surname>Freund</surname>
+        <affiliation>
+          <orgname>Concurso de participación abierta de Google</orgname>
+        </affiliation>
+      </author>
+      <author>
+        <firstname>Mike</firstname>
+        <surname>Hearn</surname>
+        <email>mike@theoretic.com</email>
+      </author>
+      <author role="maintainer">
+        <firstname>Shaun</firstname>
+        <surname>McCance</surname>
+        <affiliation>
+          <orgname>Proyecto de documentación de Gnome</orgname>
+        </affiliation>
+        <email>shaunm@gnome.org</email>
+      </author>
+    </authorgroup>
+
+    <revhistory>
+      <revision>
+        <revnumber>2.22.0</revnumber>
+        <date>2008-01-12</date>
+        <revdescription>
+          <para role="author">Andreas Freund</para>
+          <para role="publisher">Proyecto de documentación de Gnome</para>
+        </revdescription>
+      </revision>
+      <revision>
+        <revnumber>2.10</revnumber>
+        <date>2005-03-06</date>
+        <revdescription>
+          <para role="author">Shaun McCance</para>
+          <para role="publisher">Proyecto de documentación de Gnome</para>
+        </revdescription>
+      </revision>
+      <revision>
+        <revnumber>2.0</revnumber>
+        <date>2003-07-06</date>
+        <revdescription>
+          <para role="author">Mike Hearn <email>mike@theoretic.com</email></para>
+          <para role="publisher">Proyecto de documentación de Gnome</para>
+        </revdescription>
+      </revision>
+    </revhistory>
+    <!-- Translators may also add here feedback address for translations -->
+
+    <abstract role="description">
+      <para><application>Sound Juicer</application> es una herramienta de extracción de música simple y limpia. Le permite extraer la música de discos compactos y convertirla en archivos que su equipo puede entender y reproducir.</para>
+    </abstract>
+  </articleinfo>
+
+  <section id="intro">
+    <title>Introducción</title>
+    <anchor id="aboutex"/>
+    <anchor id="notice"/>
+    <indexterm>
+      <primary>Sound Juicer</primary>
+      <secondary>Manual</secondary>
+      <tertiary>sound-juicer</tertiary>
+    </indexterm>
+
+    <para><application>Sound Juicer</application> es una herramienta de extracción de música simple y limpia. Le permite extraer la música de discos compactos y convertirla en archivos que su equipo puede entender y reproducir. <application>Sound Juicer</application> también puede reproducir pistas de sonido directamente desde el CD, permitiendo escuchar el CD antes de extraerlo.</para>
+
+    <para><application>Sound Juicer</application> está diseñado para un uso sencillo y requiere poca intervención por parte del usuario. Cuando inicie <application>Sound Juicer</application>, examinará el CD en la unidad e intentará obtener la información de las pistas del disco automáticamente a través del servicio gratuito <ulink url="http://www.musicbrainz.org/">MusicBrainz</ulink>.</para>
+
+    <informalfigure>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/startup.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase><application>Sound Juicer</application> al inicio</phrase>
+          </textobject>
+        </mediaobject>
+      </screenshot>
+    </informalfigure>
+  </section>
+
+  <section id="track-data">
+    <title>Introducir datos de la pista</title>
+
+    <para>Cuando inserta un CD de sonido, <application>Sound Juicer</application> obtendrá automáticamente los datos de la pista desde  <ulink url="http://www.musicbrainz.org/">MusicBrainz</ulink>. <ulink url="http://www.musicbrainz.org/">MusicBrainz</ulink> es un servicio gratuito que proporciona una base de datos para la mayoría de los CD publicados. <application>Sound Juicer</application> usa el número de serie del CD y las posiciones y longitudes de las pistas para encontrar el CD en la base de datos de MusicBrainz.</para>
+
+    <para>Ocasionalmente, más de un CD tendrá la misma disposición. Si se encuentra más de un CD, <application>Sound Juicer</application> presentará un diálogo permitiéndole elegir qué datos del CD usar. Si se detecta el CD equivocado, o si <ulink url="http://www.musicbrainz.org/">MusicBrainz</ulink> no contiene ningún CD que coincida, tendrá que introducir la información manualmente. También, si lo desea, puede añadir la información del CD en la base de datos de <ulink url="http://www.musicbrainz.org/">MusicBrainz</ulink>.</para>
+
+    <para>La parte superior de la ventana contiene los controles para el título, artista, año y género del disco. Debajo está la lista con las pistas de sonido del disco. Puede establecer el nombre de la pista y el artista para cada pista. <application>Sound Juicer</application> usa esta información para dar nombre a los archivos y carpetas donde se almacenará su música. Además, la información de la pista y del álbum se codifica directamente en los archivos de sonido. Muchos reproductores de música, incluyendo los dispositivos portátiles, usan esta información para organizar y mostrar los archivos de sonido.</para>
+
+    <para>Para editar el título de una pista, primero seleccione la pista y después pulse sobre el título. Cuando haya terminado de introducir el título presione la tecla <keycap>Intro</keycap> de su teclado o bien pulse con el ratón fuera del área del título.</para>
+
+    <para>Cuando edite el artista del CD, automáticamente se actualiza el artista para cada pista, pero sólo si es el mismo que antes del cambio (de tal forma que cambiar el artista del álbum de una compilación no cambia todos los nombres de los artistas de las pistas). Muchos discos están compuestos por un mismo artista de tal forma que esta característica le permite ahorrar tiempo.</para>
+
+    <para>No obstante algunos discos son recopilaciones de canciones de distintos artistas. Para esos discos tendrá que introducir el nombre del artista para cada pista. Para establecer el artista de una pista, primero seleccione la pista y después pulse con el ratón en el artista. Puede establecer el nombre del artista como «Varios» o simplemente dejarlo en blanco, depende de cómo le guste organizar su música.</para>
+
+    <tip>
+      <title>Introducir los datos de la pista sólo con el teclado</title>
+      <para>Puede introducir los datos de la pista sin usar el ratón. Use las teclas de flecha arriba y abajo para seleccionar una pista y las teclas de flecha izquierda y derecha para dar el foco al título o al artista. Pulse la barra espaciadora para comenzar a editar el título o el artista y pulse <keycap>Intro</keycap> cuando haya terminado.</para>
+    </tip>
+
+    <para>Lamentablemente, <ulink url="http://www.musicbrainz.org/">MusicBrainz</ulink> no proporciona información de género, pero <application>Sound Juicer</application> incluye varios géneros típicos:</para>
+
+    <anchor id="genres"/>
+    <itemizedlist>
+      <listitem><para>Ambiental</para></listitem>
+      <listitem><para>Blues</para></listitem>
+      <listitem><para>Clásica</para></listitem>
+      <listitem><para>Country</para></listitem>
+      <listitem><para>Dance</para></listitem>
+      <listitem><para>Electrónica</para></listitem>
+      <listitem><para>Folk</para></listitem>
+      <listitem><para>Funk</para></listitem>
+      <listitem><para>Jazz</para></listitem>
+      <listitem><para>Latina</para></listitem>
+      <listitem><para>Pop</para></listitem>
+      <listitem><para>Rap</para></listitem>
+      <listitem><para>Reggae</para></listitem>
+      <listitem><para>Rock</para></listitem>
+      <listitem><para>Soul</para></listitem>
+      <listitem><para>Palabra hablada</para></listitem>
+    </itemizedlist>
+
+    <tip><para>Si elige crear un género personalizado se recordará en el futuro.</para></tip>
+
+  </section>
+
+  <section id="extracting">
+    <title>Extracción</title>
+    <anchor id="using"/>
+
+    <para>Por omisión <application>Sound Juicer</application> extraerá todas las pistas del CD a archivos de sonido. Si no desea extraer todas las pistas puede controlar cuales se extraen marcando las casillas de la primera columna  de la lista de pistas. Sólo las pistas seleccionadas se extraerán.</para>
+
+    <para>También puede usar los elementos del menú <menuchoice><guimenu>Editar</guimenu><guimenuitem>Seleccionar todo</guimenuitem></menuchoice> y <menuchoice><guimenu>Editar</guimenu><guimenuitem>Deseleccionar todo</guimenuitem></menuchoice> para seleccionar todas o ninguna de las pistas para extraer.</para>
+
+    <para>Cuando haya introducido toda la información que necesite, pulse sobre el botón <guibutton>Extraer</guibutton>, o pulse la combinación de teclas <keycombo><keycap>Ctrl</keycap><keycap>Intro</keycap></keycombo>. <application>Sound Juicer</application> comenzará a leer el disco y a guardar las canciones en archivos en su equipo. Por omisión los archivos se almacenan en la carpeta <filename>Música</filename> dentro de su carpeta personal.</para>
+
+    <para>Cuando empiece a extraer, el botón <guibutton>Extraer</guibutton> cambiará al botón <guibutton>Detener</guibutton>. Puede pulsar este botón en cualquier momento para parar la extracción.</para>
+
+    <para><application>Sound Juicer</application> indica qué pista se está extrayendo actualmente mostrando un icono al lado del número de pista. Puede ver también el progreso total y el tiempo restante estimado en la barra de estado en la parte inferior de la ventana.</para>
+
+    <para>Extraer un disco puede llevar mucho tiempo dependiendo de la velocidad de su equipo. Puede minimizar <application>Sound Juicer</application> sin ningún problema o cambiarse a otro área de trabajo para continuar usando su equipo mientras se extraen las pistas de música.</para>
+  </section>
+
+  <section id="playing">
+    <title>Reproducción</title>
+
+    <para><application>Sound Juicer</application> permite reproducir las pistas en el CD directamente. Para comenzar la reproducción del CD, simplemente pulse el botón <guibutton>Reproducir</guibutton>, o pulse la combinación de teclas <keycombo><keycap>Ctrl</keycap><keycap>P</keycap></keycombo>. Para reproducir una pista particular, seleccione esa pista y pulse <guibutton>Reproducir</guibutton>, o simplemente pulse dos veces en la pista.</para>
+
+    <para>Cuando <application>Sound Juicer</application> esté reproduciendo un CD, el botón <guibutton>Reproducir</guibutton> cambia al botón <guibutton>Pausar</guibutton>. Puede pulsar el botón en cualquier momento para pausar la reproducción, y pulsando <guibutton>Reproducir</guibutton> de nuevo continuará reproduciendo donde lo dejó.</para>
+
+    <para>Durante la reproducción <application>Sound Juicer</application> muestra una barra de progreso mostrando la posición en la pista actual. Para saltar a otra parte de la pista, arrastre el tirador a lo largo de la barra de progreso y suéltelo.</para>
+  </section>
+
+  <section id="preferences">
+    <title>Preferencias</title>
+
+    <para>La ventana de preferencias le permite controlar:</para>
+
+    <itemizedlist>
+      <listitem><para>Qué unidad de CD usará <application>Sound Juicer</application> si tiene más de una unidad,</para></listitem>
+      <listitem><para>Indica si se debe expulsar el CD cuando <application>Sound Juicer</application> termine la extracción,</para></listitem>
+      <listitem><para>Indica si se debe abrir la carpeta de música cuando <application>Sound Juicer</application> termine la extracción,</para></listitem>
+      <listitem><para>Dónde se almacenarán en su equipo las pistas de sonido extraídas,</para></listitem>
+      <listitem><para>Qué sistema usar para la jerarquía de carpetas en la fonoteca,</para></listitem>
+      <listitem><para>Qué formato usar para los nombres de las pistas de los archivos de sonido extraídos, y</para></listitem>
+      <listitem><para>Qué formato y códec se usarán para los archivos de sonido extraídos.</para></listitem>
+    </itemizedlist>
+
+    <informalfigure>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/prefs.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase>Ventana de preferencias</phrase>
+          </textobject>
+        </mediaobject>
+      </screenshot>
+    </informalfigure>
+
+    <section id="prefs-drive">
+      <title>Seleccionar una unidad de CD</title>
+
+      <para>Si tiene múltiples unidades de CD en su equipo, la lista desplegable etiquetada como<guilabel>Unidad de CD</guilabel> bajo <guilabel>Dispositivo</guilabel> le permite seleccionar qué unidad se usará. La casilla <guibutton>Expulsar al terminar</guibutton> y <guilabel>Abrir la carpeta de música al terminar</guilabel> le permiten controlar si <application>Sound Juicer</application> expulsará el disco de la unidad y si se abrirá su carpeta de música respectivamente, al terminar de extraer los archivos de sonido.</para>
+    </section>
+
+    <section id="prefs-naming">
+      <title>Nombrar los archivos de sonido</title>
+
+      <para>La lista desplegable <guilabel>Carpeta de música</guilabel> le permite seleccionar en qué carpeta se almacenarán los archivos de sonido. Seleccione una de las carpetas de la lista o bien escoja <guilabel>Otro</guilabel> para seleccionar cualquier otra carpeta con el seleccionador de archivos. Por omisión los archivos se almacenan en la carpeta <filename>Música</filename> de su carpeta de inicio.</para>
+
+      <para>La lista desplegable <guilabel>Nombres de las pistas</guilabel> le permite controlar cómo se llamarán los archivos y las carpetas. <application>Sound Juicer</application> puede almacenar los archivos de sonido en carpetas separadas, ayudándole a mantener su música organizada. Puede escoger cómo se llamarán estas carpetas usando la lista desplegable de <guilabel>Jerarquía de carpetas</guilabel>. Por omisión <application>Sound Juicer</application> crea una carpeta para el artista del álbum y una subcarpeta para el álbum.</para>
+
+      <para>Utilice la lista desplegable <guilabel>Nombre del archivo</guilabel> para seleccionar cómo se llamarán los archivos de sonido. Por omisión <application>Sound Juicer</application> utiliza el número de la pista seguido por un guión y el nombre de la pista.</para>
+
+      <para>Seleccione la casilla <guibutton>Quitar caracteres especiales</guibutton> para que <application>Sound Juicer</application> elimine o reemplace los caracteres como los espacios y signos de puntuación en los nombres de los archivos. Esto es útil si planea poner los archivos de sonido en un dispositivo portátil o en otro equipo que tenga más limitaciones en los nombres de archivos.</para>
+
+      <note><para>Incluso cuando <guibutton>Quitar caracteres especiales</guibutton> no esté seleccionado, <application>Sound Juicer</application> eliminará el carácter <literal>/</literal> de los nombres de los archivos. Este carácter no se puede usar en el nombre de ningún archivo en sistemas UNIX, Linux y sistemas similares.</para></note>
+
+      <tip><para>En la parte inferior de la sección <guilabel>Nombres de las pistas</guilabel> se muestra un ejemplo de ruta. Esto le permite saber cómo será el nombre de un archivo y dónde se ubicará, de acuerdo con los ajustes para la <guilabel>Jerarquía de carpetas</guilabel>, <guilabel>Nombre del archivo</guilabel>, y <guibutton>Quitar caracteres especiales</guibutton>.</para></tip>
+    </section>
+
+    <section id="prefs-format">
+      <title>Seleccionar un formato</title>
+
+      <para>Puede seleccionar qué formato de archivo de sonido usará <application>Sound Juicer</application> para almacenar las pistas en su equipo. Hay una gran cantidad de formatos disponibles, cada uno de ellos tiene sus propias ventajas. El número de formatos disponibles en su equipo puede variar, pero las siguientes opciones suelen estar disponibles:</para>
+
+      <variablelist>
+        <varlistentry>
+          <term>Calidad de CD, con pérdida (Ogg multimedia)</term>
+          <listitem>
+            <para>Esta opción es la seleccionada por omisión. <ulink url="http://www.vorbis.org/">Ogg Vorbis</ulink>, al igual que otros formatos con pérdida (como MP3 y AAC) descarta alguna información del archivo original de sonido. Aunque el archivo resultante no es una réplica perfecta del disco, las diferencias generalmente no son distinguibles para la mayoría de los oyentes. Como resultado, los formatos con pérdida suelen tener tamaños de archivo muy pequeños.</para>
+
+            <para>Por omisión, el formato Ogg Vorbis es el formato con pérdida usado por <application>Sound Juicer</application>. Ogg Vorbis es un formato abierto, desarrollado por la <ulink url="http://xiph.org/">Fundación Xiph.Org</ulink>, que trata de producir archivos de tamaño pequeño y con alta calidad de sonido mejor que otros formatos con pérdida. Mientras que no está tan extendido como el viejo formato MP3, la mayoría de los reproductores de música pueden reproducir archivos Ogg Vorbis y muchos reproductores de sobremesa tienen soporte incorporado.</para>
+
+            <para>Xiph.Org mantiene una lista de <ulink url="http://wiki.xiph.org/index.php/VorbisSoftwarePlayers">programas reproductores</ulink>, <ulink url="http://wiki.xiph.org/index.php/PortablePlayers">reproductores portátiles</ulink>, y <ulink url="http://wiki.xiph.org/index.php/StaticPlayers">reproductores de sobremesa</ulink> que soportan Ogg Vorbis.</para>
+          </listitem>
+        </varlistentry>
+
+        <varlistentry>
+          <term>Calidad de CD, sin pérdida (audio FLAC)</term>
+          <listitem>
+            <para>El formato de sonido <ulink url="http://flac.sourceforge.net/">FLAC</ulink> es un formato sin pérdida. Esto es, no se pierde ninguna información cuando se convierte a FLAC, aunque el sonido se comprima hasta el 70%. FLAC y otros formatos sin pérdida son muy populares donde se necesita alta fidelidad de sonido, pero se necesita comprimir los archivos para ahorrar espacio en el disco y también los tiempos de transferencia de red.</para>
+          </listitem>
+        </varlistentry>
+
+        <varlistentry>
+          <term>Calidad de CD, AAC (sonido en MPEG-4)</term>
+          <listitem>
+            <para>El formato de sonido AAC (Advanced Audio Coding) es un formato con pérdida estandarizado. Es el sucesor del formato MP3 y consigue una mejor calidad de sonido que el formato MP3. Muchos reproductores de software y hardware soportan el formato AAC.</para>
+          </listitem>
+        </varlistentry>
+
+        <varlistentry>
+          <term>Voz, sin pérdida (audio WAV)</term>
+          <listitem>
+            <para>El perfil de salida de voz produce un archivo monofónico de baja calidad. Puede querer seleccionar este perfil para charlas, libros grabados en cintas, y otros discos de voz hablada, donde la pérdida de calidad de sonido es menos importante.</para>
+          </listitem>
+        </varlistentry>
+        
+<varlistentry>
+          <term>MP3</term>
+          <listitem>
+            <para>El formato de sonido MP3 es un formato con pérdida. Está muy soportado y es muy popular, especialmente por su uso en reproductores portátiles.</para>
+          </listitem>
+        </varlistentry>
+
+      </variablelist>
+
+      <para>Puede pulsar en el botón <guibutton>Editar perfiles</guibutton> para editar los formatos de sonido disponibles. El diálogo del editor de perfiles proporciona acceso directo a la conversión de sonido. Los perfiles se definen con cauces <application>GStreamer</application>. <application>GStreamer</application> es la biblioteca multimedia que usan <application>Sound Juicer</application> y otras aplicaciones. Una explicación completa de los perfiles de sonido se encuentra fuera del ámbito de este documento.</para>
+    </section>
+  </section>
+
+</article>

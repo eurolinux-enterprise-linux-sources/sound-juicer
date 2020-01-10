@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- -*- indent-tabs-mode: nil -*- -->
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN" "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd" [
+<!ENTITY app "Sound Juicer">
+<!ENTITY application "<application>&app;</application>">
+<!ENTITY appversion "2.22.0">
+<!ENTITY manrevision "2.22.0">
+<!ENTITY musicbrainz "<ulink url='http://www.musicbrainz.org/'>MusicBrainz</ulink>">
+]>
+<?gnome-doc-status Version: 2.12
+Status: Draft
+?>
+<article id="index" lang="eu">
+  <articleinfo>
+    <title><application>Sound Juicer</application>en eskuliburua</title>
+    
+    <copyright>
+      <year>2003</year>
+      <holder>Mike Hearn (mike@theoretic.com)</holder>
+    </copyright>
+    <copyright>
+      <year>2005</year>
+      <holder>Shaun McCance</holder>
+    </copyright>
+    <copyright>
+      <year>2008</year>
+      <holder>Andreas Freund</holder>
+    </copyright><copyright><year>2008.</year><holder>Hizkuntza Politikarako Sailburuordetza (hizpol@ej.gv.es)</holder></copyright>
+    
+    <publisher>
+      <publishername>GNOMEren dokumentazio-proiektua</publishername>
+    </publisher>
+
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+
+    <authorgroup>
+      <author>
+        <firstname>Andreas</firstname>
+        <surname>Freund</surname>
+        <affiliation>
+          <orgname>Google Highly Open Participation Contest</orgname>
+        </affiliation>
+      </author>
+      <author>
+        <firstname>Mike</firstname>
+        <surname>Hearn</surname>
+        <email>mike@theoretic.com</email>
+      </author>
+      <author role="maintainer">
+        <firstname>Shaun</firstname>
+        <surname>McCance</surname>
+        <affiliation>
+          <orgname>GNOMEren dokumentazio-proiektua</orgname>
+        </affiliation>
+        <email>shaunm@gnome.org</email>
+      </author>
+    </authorgroup>
+
+    <revhistory>
+      <revision>
+        <revnumber>2.22.0</revnumber>
+        <date>2008-01-12</date>
+        <revdescription>
+          <para role="author">Andreas Freund</para>
+          <para role="publisher">GNOMEren dokumentazio-proiektua</para>
+        </revdescription>
+      </revision>
+      <revision>
+        <revnumber>2.10</revnumber>
+        <date>2005-03-06</date>
+        <revdescription>
+          <para role="author">Shaun McCance</para>
+          <para role="publisher">GNOMEren dokumentazio-proiektua</para>
+        </revdescription>
+      </revision>
+      <revision>
+        <revnumber>2.0</revnumber>
+        <date>2003-07-06</date>
+        <revdescription>
+          <para role="author">Mike Hearn <email>mike@theoretic.com</email></para>
+          <para role="publisher">GNOMEren dokumentazio-proiektua</para>
+        </revdescription>
+      </revision>
+    </revhistory>
+    <!-- Translators may also add here feedback address for translations -->
+
+    <abstract role="description">
+      <para><application>Sound Juicer</application> is a simple and clean CD ripping tool. It allows you
+      to extract the audio from audio compact discs and convert them into audio
+      files that your computer can understand and play.</para>
+    </abstract>
+  </articleinfo>
+
+  <section id="intro">
+    <title>Sarrera</title>
+    <anchor id="aboutex"/>
+    <anchor id="notice"/>
+    <indexterm>
+      <primary>Sound Juicer</primary>
+      <secondary>Eskuliburua</secondary>
+      <tertiary>sound-juicer</tertiary>
+    </indexterm>
+
+    <para><application>Sound Juicer</application> CDetatik musika erauzteko tresna erraz eta garbia da. Audioko disko trinkoetatik audioa erauz dezakezu eta ordenagailuak ulertuko eta erreproduzituko duen audio-fitxategi bihur dezakezu. <application>Sound Juicer</application> aplikazioak CDtik zuzenean erreproduzi ditzake audio-pistak, eta horrek aukera ematen dizu musika erauzi baino lehen CDa aurreikusteko.</para>
+
+    <para><application>Sound Juicer</application> erabilerraza izateko eta erabiltzaileak gauza gutxi egin behar izateko diseinatua dago. <application>Sound Juicer</application> abiarazten duzunean, CDa unitatean aztertuko du eta audio-pistei buruzko informazioa aurkitzen saiatuko da. Horretarako, doan erabil daitekeen <ulink url="http://www.musicbrainz.org/">MusicBrainz</ulink> zerbitzua erabiliko du.</para>
+
+    <informalfigure>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/startup.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase><application>Sound Juicer</application> abioan</phrase>
+          </textobject>
+        </mediaobject>
+      </screenshot>
+    </informalfigure>
+  </section>
+
+  <section id="track-data">
+    <title>Pistako informazioa sartzea</title>
+
+    <para>When you insert an audio CD, <application>Sound Juicer</application> will automatically retrieve
+    the track data from <ulink url="http://www.musicbrainz.org/">MusicBrainz</ulink>.  <ulink url="http://www.musicbrainz.org/">MusicBrainz</ulink> is a free service that provides
+    a database of data for most published CDs.  <application>Sound Juicer</application> uses the CD's serial
+    number and the positions and lengths of the tracks to match against CD in the
+    <ulink url="http://www.musicbrainz.org/">MusicBrainz</ulink> database.</para>
+
+    <para>Occasionally, more than one CD will have the same layout.  If more than
+    one CD is found, <application>Sound Juicer</application> will present a dialog allowing you to choose
+    which CD data to use.  If the wrong CD is detected, or if <ulink url="http://www.musicbrainz.org/">MusicBrainz</ulink> does
+    not contain any matching CDs, you will have to enter the track information
+    manually.  Also, if you choose, you can add the information for the CD to
+    <ulink url="http://www.musicbrainz.org/">MusicBrainz</ulink> database with a banner that will appear.</para>
+
+    <para>The top of the window contains text boxes for the title, artist, year,
+    and genre of the CD.  Below that is a list of the audio tracks on the CD.  You
+    can set the track title and artist for each track.  <application>Sound Juicer</application> uses this
+    information to name the files and folders where your music is stored.  The
+    track and album information is also encoded directly into the audio files.
+    Many music players, including portable devices, use this information to
+    organize and display the audio files.</para>
+
+    <para>Pista baten izenburua editatzeko, hautatu lehendabizi pista eta ondoren egin klik izenburuan. Izenburu berria sartzen bukatu duzunean, sakatu <keycap>Sartu</keycap> teklatuan edo egin klik izenburuaren kanpoan.</para>
+
+    <para>When you edit the artist for the CD, the artist for each track is
+    automatically updated, but only if they also matched before the change (so that
+    changling the album artist of a compilation doesn't change all of the track
+    artists too).  Most CDs are by a single artist, and this feature saves you the time 
+    of entering the artist for each track.</para>
+
+    <para>CD batzuk, hala ere, hainbat artistaren abesti-bildumak dira. CD horietan, pista bakoitzari artistaren izena sartu behar diozu. Pista baten artista konfiguratzeko, hautatu lehendabizi pista eta, ondoren, egin klik artistaren gainean. CDko artistari "Askotarikoak" balioa ematen zaio edo besterik gabe zurian uzten da, zure musika antolatu nahi duzun moduaren arabera.</para>
+
+    <tip>
+      <title>Entering Track Data With the Keyboard Only</title>
+      <para>You can enter track data without using the mouse.  Use the up and
+      down arrow keys to select a track, and the left and right arrow keys to
+      focus the title or artist.  Press the space bar to begin editing the
+      title or artist, and press <keycap>Enter</keycap> when finished.</para>
+    </tip>
+
+    <para><ulink url="http://www.musicbrainz.org/">MusicBrainz</ulink> unfortunately does not provide genre data, but
+    <application>Sound Juicer</application> includes several stock genres:
+    </para>
+
+    <anchor id="genres"/>
+    <itemizedlist>
+      <listitem><para>Giroko musika</para></listitem>
+      <listitem><para>Blues-a</para></listitem>
+      <listitem><para>Klasikoa</para></listitem>
+      <listitem><para>Country-a</para></listitem>
+      <listitem><para>Dance-a</para></listitem>
+      <listitem><para>Elektronikoa</para></listitem>
+      <listitem><para>Folka</para></listitem>
+      <listitem><para>Funk-a</para></listitem>
+      <listitem><para>Jazza</para></listitem>
+      <listitem><para>Latinoa</para></listitem>
+      <listitem><para>Pop-a</para></listitem>
+      <listitem><para>Rap-a</para></listitem>
+      <listitem><para>Reggae-a</para></listitem>
+      <listitem><para>Rocka</para></listitem>
+      <listitem><para>Soul-a</para></listitem>
+      <listitem><para>Spoken Word-a</para></listitem>
+    </itemizedlist>
+
+    <tip><para>If you choose to make a custom genre, it will be remembered in the future.</para></tip>
+
+  </section>
+
+  <section id="extracting">
+    <title>Erauztea</title>
+    <anchor id="using"/>
+
+    <para>Lehenespenez, <application>Sound Juicer</application> aplikazioak CDko audio-fitxategietara erauziko ditu pista guztiak. Pista guziak erauzi nahi ez badituzu, zein pista atera kontrolatu dezakezu. Horretarako, erabili pisten zerrendako lehen zutabean dauden kontrol-laukiak. Hautatzen dituzun pistak soilik erauziko dira.</para>
+
+    <para><menuchoice><guimenu>Editatu</guimenu><guimenuitem>Hautatu denak</guimenuitem></menuchoice> eta <menuchoice><guimenu>Editatu</guimenu><guimenuitem>Desautatu denak</guimenuitem></menuchoice> menuak ere erabil ditzakezu erauzi nahi dituzun pista guztiak edo bat ere ez hautatzeko.</para>
+
+    <para>Behar duzun informazio guztia idatzi duzunean, egin klik <guibutton>Erauzi</guibutton> botoian, edo sakatu <keycombo><keycap>Ktrl</keycap><keycap>Sartu</keycap></keycombo>. <application>Sound Juicer</application> aplikazioa hasiko da audioa CDtik irakurtzen eta fitxategiak zure ordenagailuan gordetzen. Lehenespenez, audio-fitxategiak <filename>Musika</filename> karpetan gordeko dira.</para>
+
+    <para>Musika erauzten hasten zarenean, <guibutton>Erauzi</guibutton> botoia <guibutton>Gelditu</guibutton> botoia izatera pasatuko da. Nahi duzunean, klik egin dezakezu botoi horretan musika erauzten gelditzeko.</para>
+
+    <para><application>Sound Juicer</application> indicates which track it is currently extracting by
+    displaying an icon next to the track number.  You can also see the total
+    progress and estimated time left in the status bar at the bottom of the
+    window.</para>
+
+    <para>CD batetik musika erauzteak denbora asko har lezake, zure ordenagailuaren abiaduraren arabera. <application>Sound Juicer</application> segurtasunez minimiza dezakezu edo beste laneko area batera mugi dezakezu, audioa erauzten den bitartean ordenagailua erabiltzen jarraitu ahal izateko.</para>
+  </section>
+
+  <section id="playing">
+    <title>Erreproduzitzea</title>
+
+    <para><application>Sound Juicer</application> aplikazioak aukera ematen dizu CDko pistak zuzenean erreproduzitzeko. CDa erreproduzitzen hasteko, egin klik <guibutton>Erreproduzitu</guibutton> botoian, edo sakatu <keycombo><keycap>Ktrl</keycap><keycap>P</keycap></keycombo>. Pista jakin bat erreproduzitzeko, hautatu pista eta egin klik <guibutton>Erreproduzitu</guibutton> botoian, edo egin klik bi aldiz pistan.</para>
+
+    <para><application>Sound Juicer</application> CD bat erreproduzitzen ari denean, <guibutton>Erreproduzitu</guibutton> botoia <guibutton>Pausarazi</guibutton> bihurtzen da. Nahi duzunean egin dezakezu klik botoi horretan erreprodukzioa pausarazteko. Berriro ere utzi duzun tokitik erreproduzitzen jarraitzeko, egin klik <guibutton>Erreproduzitu</guibutton> botoian.</para>
+
+    <para>While playing, <application>Sound Juicer</application> displays a slider showing the position 
+    on the current track.  To seek to another part of the track, drag the handle
+    along the slider and release.</para>
+  </section>
+
+  <section id="preferences">
+    <title>Hobespenak</title>
+
+    <para>Hobespenen leihoarekin ondokoak kontrolatuko dituzu:</para>
+
+    <itemizedlist>
+      <listitem><para><application>Sound Juicer</application>ek zer CD unitate erabiltzen duen, unitate bat baino gehiago baldin baduzu,</para></listitem>
+      <listitem><para>Whether or not to eject the CD when <application>Sound Juicer</application> is
+      finished extracting,</para></listitem>
+      <listitem><para>Whether or not to open the music folder when <application>Sound Juicer</application>
+      is finished extracting,</para></listitem>
+      <listitem><para>Where the extracted audio files are placed on your
+      computer,</para></listitem>
+      <listitem><para>Which system to use for the folder hierarchy in the music
+      folder,</para></listitem>
+      <listitem><para>Which format to use for the track names of the extracted
+      audio files, and</para></listitem>
+      <listitem><para>Which file format and codec are used for the extracted
+      audio files.</para></listitem>
+    </itemizedlist>
+
+    <informalfigure>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/prefs.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase>Hobespenen leihoa</phrase>
+          </textobject>
+        </mediaobject>
+      </screenshot>
+    </informalfigure>
+
+    <section id="prefs-drive">
+      <title>CD unitate bat hautatzea</title>
+
+      <para>If you have multiple CD drives in your computer, the drop-down list
+      labelled <guilabel>CD drive</guilabel> under <guilabel>Device</guilabel>
+      allows you to select which drive to use.  The check boxes <guibutton>Eject
+      when finished</guibutton> and <guibutton>Open music folder when finished
+      </guibutton>allow you to control whether <application>Sound Juicer</application> will eject the CD 
+      from the drive, and whether it will open your music folder respectively, 
+      when it has finished extracting the audio files.</para>
+    </section>
+
+    <section id="prefs-naming">
+      <title>Audio-fitxategiak izendatzea</title>
+
+      <para><guilabel>Musika-karpeta</guilabel> goitibeherako zerrendak aukera ematen dizu audio-fitxategiak zer karpetatan gorde nahi dituzun hautatzeko. Hautatu zerrendako karpeta bat, edo aukeratu <guilabel>Beste zenbait</guilabel> fitxategi-aukeratzailearekin beste karpeta bat hautatzeko. Lehenespenez, .fitxategiak zure etxeko karpetako <filename>Musika</filename> karpetan gordeko dira.</para>
+
+      <para><guilabel>Pista-izenak</guilabel> atalak aukera ematen dizu fitxategien eta karpeten izenak kontrolatzeko. <application>Sound Juicer</application> aplikazioak karpeta desberdinetan gorde ditzake audio-fitxategiak, eta horrek musika antolatzen lagunduko dizu. <guilabel>Karpeta-hierarkia</guilabel> deritzon goitibeherako zerrenda erabil dezakezu karpetak nola sortu eta nola izendatu aukeratzeko. Lehenespenez, <application>Sound Juicer</application> aplikazioak artista bakoitzarentzat karpeta bat sortzen du, eta album bakoitzarentzat azpikarpeta bat.</para>
+
+      <para>Erabili <guilabel>Fitxategiaren izena</guilabel> deritzon goitibeherako zerrenda audio-fitxategiak izendatzeko modua hautatzeko. Lehenespenez, <application>Sound Juicer</application>ek izen hau ematen die: pista-zenbakia + marratxoa + pistaren izena.</para>
+
+      <para>Hautatu <guibutton>Kendu karaktere bereziak</guibutton> kontrol-laukia <application>Sound Juicer</application> aplikazioak zuriuneak eta puntuak bezalako karaktereak fitxategi-izenetatik kentzeko edo ordezteko. Erabilgarria da audio-fitxategiak gailu eramangarri batean edo fitxategi-izenekin muga gehiago dituen beste ordenagailu batean jartzeko asmoa baduzu.</para>
+
+      <note><para>Nahiz eta <guibutton>Kendu karaktere bereziak</guibutton> hautatuta ez egon, <application>Sound Juicer</application>ek <literal>/</literal> kendu egingo du karakterea fitxategi-izenetatik. Karaktere hori ezin da fitxategi-izenetan erabili UNIX, Linux eta antzeko sistemetan.</para></note>
+
+      <tip><para>At the bottom of the <guilabel>Track Names</guilabel> section,
+      an example path is shown.  This lets you know what a file name might look
+      like and where it is placed, according to your settings for <guilabel>Folder
+      hierarchy</guilabel>, <guilabel>File name</guilabel>, and <guibutton>Strip
+      special characters</guibutton>.</para></tip>
+    </section>
+
+    <section id="prefs-format">
+      <title>Formatua hautatzea</title>
+
+      <para><application>Sound Juicer</application>ek pistak ordenagailuan gordetzeko erabiltzen duen audio-fitxategiaren formatua hauta dezakezu. Formatu ugari daude erabilgarri, eta bakoitzak bere abantailak ditu. Ordenagailuan erabilgarri dauden formatuak aldatu egin daitezke, baina honako aukera hauek egoten dira normalean erabilgarri:</para>
+
+      <variablelist>
+        <varlistentry>
+          <term>CD Quality, Lossy (Ogg multimedia)</term>
+          <listitem>
+            <para>Aukera hori lehenespenez hautatzen da. Beste audio-formatu galeradun batzuen moduan, <ulink url="http://www.vorbis.org/">Ogg Vorbis</ulink>ek alde batera uzten du jatorrizko audioaren zenbait informazio. Audio-fitxategia CD audioaren kopia perfektua ez den arren, entzule gehienok ez ditugu desberdintasunak atzematen. Ondorioz, galeradun formatuen fitxategiak oso txikiak izan ohi dira.</para>
+
+            <para>Ogg Vorbis formatua <application>Sounde Juicer</application> aplikazioan lehenespenez erabiltzen den formatu galeraduna da. Ogg Vorbis formatu ireki bat da, <ulink url="http://xiph.org/">Xiph.Org Fundazioa</ulink>k garatua, eta beste formatu galeradun askok baino tamaina txikiagoko eta kalitate handiagoko audioak egin ohi ditu. Nahiz eta ez dagoen MP3 formatua bezain zabaldua, musika-software gehienek erreproduzitu ditzakete OGG Vorbis fitxategiak, eta hardware-erreproduzitzaile gehienek dute euskarri hau.</para>
+
+            <para>OGG Vorbis-ek onartzen dituen <ulink url="http://wiki.xiph.org/index.php/VorbisSoftwarePlayers">software-erroproduzitzaileen</ulink>, <ulink url="http://wiki.xiph.org/index.php/PortablePlayers">hardware-erreproduzitzaile eramangarrien</ulink> eta <ulink url="http://wiki.xiph.org/index.php/staticPlayers">Erreproduzitzaile estatikoen</ulink> zerrendak erabiltzen ditu Xiph.Org-ek.</para>
+          </listitem>
+        </varlistentry>
+
+        <varlistentry>
+          <term>CDaren kalitatea, galerarik gabea (FLAC audioa)</term>
+          <listitem>
+            <para><ulink url="http://flac.sourceforge.net/">FLAC</ulink> audio-formatua galerarik gabeko formatu bat da. FLACera pasatzean ez da audioaren informaziorik galtzen, nahiz eta audio-fitxategiak % 70eraino konprimitzen dituen. FLAC eta beste galerarik gabeko formatu batzuk zabalduta daude audioaren fideltasun handia behar denean, baina fitxategiak konprimitu egin behar dira diskoan lekua gordetzeko eta sareko transferentzia-denbora murrizteko.</para>
+          </listitem>
+        </varlistentry>
+
+        <varlistentry>
+          <term>CD Quality, AAC (MPEG-4 audio)</term>
+          <listitem>
+            <para>The AAC (short for Advanced Audio Coding) audio format is a
+            standardized lossy format. It is a successor to the MP3 format and
+            it achieves better sound quality than the MP3 format. Many software
+            players and hardware players support the AAC format.</para>
+          </listitem>
+        </varlistentry>
+
+        <varlistentry>
+          <term>Voice, Lossless (WAV audio)</term>
+          <listitem>
+            <para>Ahotsaren irteera-profilak kalitate gutxiko audio bakarreko fitxategiak ekoizten ditu. Agian profil hori hautatu nahiko duzu irakurketarako, kasetean grabatutako liburuetarako eta ahozko testuen CDetarako. Horietan, audio-kalitatea galtzea ez da hain garrantzitsua.</para>
+          </listitem>
+        </varlistentry>
+        
+<varlistentry>
+          <term>MP3</term>
+          <listitem>
+            <para>The MP3 audio format is a lossy format. It is widely supported
+            and popular, especially because of its use for portable media
+            players.</para>
+          </listitem>
+        </varlistentry>
+
+      </variablelist>
+
+      <para><guibutton>Editatu profilak</guibutton> botoian klik egin dezakezu erabilgarri dauden audio-formatuak editatzeko. Profil-editorearen elkarrizketa-koadroak audio-elkarrizketarako sarbide zuzena ematen du. Profilak <application>Gstreamer</application> kanalizazioarekin zehazten dira. <application>Sound Juicer</application> eta beste zenbait multimedia-aplikaziok erabiltzen duten multimedia-liburutegia da <application>Gstreamer</application>. Audio-profilen azalpen osoa duzu dokumentu honen aukeretatik kanpo.</para>
+    </section>
+  </section>
+
+</article>

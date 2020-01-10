@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- -*- indent-tabs-mode: nil -*- -->
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN" "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd" [
+<!ENTITY app "Sound Juicer">
+<!ENTITY application "<application>&app;</application>">
+<!ENTITY appversion "2.22.0">
+<!ENTITY manrevision "2.22.0">
+<!ENTITY musicbrainz "<ulink url='http://www.musicbrainz.org/'>MusicBrainz</ulink>">
+]>
+<?gnome-doc-status Version: 2.12
+Status: Draft
+?>
+<article id="index" lang="sv">
+  <articleinfo>
+    <title>Handbok för <application>Sound Juicer</application></title>
+    
+    <copyright>
+      <year>2003</year>
+      <holder>Mike Hearn (mike@theoretic.com)</holder>
+    </copyright>
+    <copyright>
+      <year>2005</year>
+      <holder>Shaun McCance</holder>
+    </copyright>
+    <copyright>
+      <year>2008</year>
+      <holder>Andreas Freund</holder>
+    </copyright><copyright><year>2007, 2008, 2009</year><holder>Daniel Nylander (po@danielnylander.se)</holder></copyright>
+    
+    <publisher>
+      <publishername>Dokumentationsprojekt för GNOME</publishername>
+    </publisher>
+
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+
+    <authorgroup>
+      <author>
+        <firstname>Andreas</firstname>
+        <surname>Freund</surname>
+        <affiliation>
+          <orgname>Google Highly Open Participation Contest</orgname>
+        </affiliation>
+      </author>
+      <author>
+        <firstname>Mike</firstname>
+        <surname>Hearn</surname>
+        <email>mike@theoretic.com</email>
+      </author>
+      <author role="maintainer">
+        <firstname>Shaun</firstname>
+        <surname>McCance</surname>
+        <affiliation>
+          <orgname>Dokumentationsprojekt för GNOME</orgname>
+        </affiliation>
+        <email>shaunm@gnome.org</email>
+      </author>
+    </authorgroup>
+
+    <revhistory>
+      <revision>
+        <revnumber>2.22.0</revnumber>
+        <date>2008-01-12</date>
+        <revdescription>
+          <para role="author">Andreas Freund</para>
+          <para role="publisher">Dokumentationsprojekt för GNOME</para>
+        </revdescription>
+      </revision>
+      <revision>
+        <revnumber>2.10</revnumber>
+        <date>2005-03-06</date>
+        <revdescription>
+          <para role="author">Shaun McCance</para>
+          <para role="publisher">Dokumentationsprojekt för GNOME</para>
+        </revdescription>
+      </revision>
+      <revision>
+        <revnumber>2.0</revnumber>
+        <date>2003-07-06</date>
+        <revdescription>
+          <para role="author">Mike Hearn <email>mike@theoretic.com</email></para>
+          <para role="publisher">Dokumentationsprojekt för GNOME</para>
+        </revdescription>
+      </revision>
+    </revhistory>
+    <!-- Translators may also add here feedback address for translations -->
+
+    <abstract role="description">
+      <para><application>Sound Juicer</application> är ett enkelt och rent cd-extraheringsverktyg. Det låter dig extrahera ljudet från ljud-cd-skivor och konvertera dem till ljudfiler som din dator kan förstå och spela upp.</para>
+    </abstract>
+  </articleinfo>
+
+  <section id="intro">
+    <title>Introduktion</title>
+    <anchor id="aboutex"/>
+    <anchor id="notice"/>
+    <indexterm>
+      <primary>Sound Juicer</primary>
+      <secondary>Handbok</secondary>
+      <tertiary>sound-juicer</tertiary>
+    </indexterm>
+
+    <para><application>Sound Juicer</application> är ett enkelt och rent cd-rippningsverktyg. Det låter dig extrahera ljudet från ljud-cd-skivor och konvertera dem till ljudfiler som din dator kan förstå och spela upp. <application>Sound Juicer</application> kan även spela upp ljudspåren direkt från cd-skivan vilket låter dig granska cd-skivan före du rippar den.</para>
+
+    <para><application>Sound Juicer</application> är utformad till att vara enkel att använda, och att arbeta med liten användaraktion. När du startar <application>Sound Juicer</application> kommer den att undersöka cd-skivan i enheten och försöka lokalisera information om ljudspåren med den fritt tillgängliga tjänsten <ulink url="http://www.musicbrainz.org/">MusicBrainz</ulink>.</para>
+
+    <informalfigure>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/startup.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase><application>Sound Juicer</application> vid uppstart</phrase>
+          </textobject>
+        </mediaobject>
+      </screenshot>
+    </informalfigure>
+  </section>
+
+  <section id="track-data">
+    <title>Inmatning av spårdata</title>
+
+    <para>När du matar in en ljud-cd kommer <application>Sound Juicer</application> att automatiskt hämta spårdata från <ulink url="http://www.musicbrainz.org/">MusicBrainz</ulink>. <ulink url="http://www.musicbrainz.org/">MusicBrainz</ulink> är en gratistjänst som tillhandahåller en databas med data för de flesta utgivna cd-skivor. <application>Sound Juicer</application> använder cd-skivans serienummer, positioner och spårlängd för att matcha cd-skivan mot <ulink url="http://www.musicbrainz.org/">MusicBrainz</ulink> databas.</para>
+
+    <para>Ibland händer det dock att fler än en cd-skiva har samma layout. Om fler än en cd-skiva hittas kommer <application>Sound Juicer</application> att visa en dialogruta där du kan välja vilken cd-skiva som ska användas. Om fel cd-skiva identifieras, eller om <ulink url="http://www.musicbrainz.org/">MusicBrainz</ulink> inte innehåller några matchande cd-skivor, kan du ange spårinformationen manuellt. I tillägg till det, om du väljer det, kan du lägga till informationen för cd-skivan till <ulink url="http://www.musicbrainz.org/">MusicBrainz</ulink> databas med en banderoll som kommer att visas.</para>
+
+    <para>Överkanten av fönstret innehåller textrutor för titel, artist, år och genren för cd-skivan. Nedanför finns en lista med ljudspåren på cd-skivan. Du kan ställa in spårtitel och artist för varje spår. <application>Sound Juicer</application> använder denna information för att namnge filerna och mapparna där din musik lagras. Spår- och albuminformation kodas direkt in i ljudfilerna. Många musikspelare, inklusive bärbara enheter, använder denna information för att organisera och visa ljudfilerna.</para>
+
+    <para>För att redigerar titeln på ett spår, välj först spåret, klicka sedan på titeln. När du har matat in titeln färdigt, tryck på <keycap>Enter</keycap>-tangenten på ditt tangentbord eller klicka utanför titeln.</para>
+
+    <para>När du redigerar artisten för en cd-skiva kommer artisten för varje spår att automatiskt uppdateras, men endast om de även matchas innan ändringen (så att ändringen av albumartisten för en samlingsskiva inte ändrar alla spårartisterna också). De flesta cd-skivor innehåller spår av samma artist och denna funktion sparar dig tiden att mata in artisten för varje spår.</para>
+
+    <para>Vissa cd-skivor, tyvärr, är samlingsskivor med låtar av olika artister. För dessa cd-skivor måste du mata in artisten för varje spår. För att ställa in artisten för ett spår, välj först spåret, klicka sedan på artisten. Du kan ställa in artisten för cd-skivan till ett värde som "Diverse" eller helt enkelt lämna ett blankt, beroende på hur du föredrar att organisera din musik.</para>
+
+    <tip>
+      <title>Mata in spårdata med endast tangentbordet</title>
+      <para>Du kan mata in spårdata utan att använda musen. Använd upp- och nedpilarna för att välja ett spår och vänstra och högra piltangenterna för att fokusera titeln eller artisten. Tryck på blanksteg för att påbörja redigering av titeln eller artist, tryck sedan på <keycap>Enter</keycap> när du är färdig.</para>
+    </tip>
+
+    <para><ulink url="http://www.musicbrainz.org/">MusicBrainz</ulink> tillhandahåller tyvärr inte data om genrer men <application>Sound Juicer</application> inkluderar flera standardgenrer:</para>
+
+    <anchor id="genres"/>
+    <itemizedlist>
+      <listitem><para>Ambient</para></listitem>
+      <listitem><para>Blues</para></listitem>
+      <listitem><para>Klassisk</para></listitem>
+      <listitem><para>Country</para></listitem>
+      <listitem><para>Dance</para></listitem>
+      <listitem><para>Electronica</para></listitem>
+      <listitem><para>Folk</para></listitem>
+      <listitem><para>Funk</para></listitem>
+      <listitem><para>Jazz</para></listitem>
+      <listitem><para>Latin</para></listitem>
+      <listitem><para>Pop</para></listitem>
+      <listitem><para>Rap</para></listitem>
+      <listitem><para>Reggae</para></listitem>
+      <listitem><para>Rock</para></listitem>
+      <listitem><para>Soul</para></listitem>
+      <listitem><para>Tal</para></listitem>
+    </itemizedlist>
+
+    <tip><para>Om du väljer att skapa en anpassad genre så kommer den att kommas ihåg.</para></tip>
+
+  </section>
+
+  <section id="extracting">
+    <title>Extrahering</title>
+    <anchor id="using"/>
+
+    <para>Som standard kommer <application>Sound Juicer</application> att extrahera alla spår på cd-skivan till ljudfiler. Om du inte önskar att extrahera alla spåren kan du kontrollera vilka spår som ska extraheras genom att använda kryssrutorna i första kolumnen av spårlistningen. Endast de spår som du har markerat kommer att extraheras.</para>
+
+    <para>Du kan också använda menyposterna <menuchoice><guimenu>Redigera</guimenu><guimenuitem>Markera alla</guimenuitem></menuchoice> och <menuchoice><guimenu>Redigera</guimenu><guimenuitem>Avmarkera alla</guimenuitem></menuchoice> för att markera alla eller inget av de spår som ska extraheras.</para>
+
+    <para>När du har matat in all information som du behöver, klicka på knappen <guibutton>Extrahera</guibutton>, eller tryck <keycombo><keycap>Ctrl</keycap><keycap>Enter</keycap></keycombo>. <application>Sound Juicer</application> kommer att påbörja läsningen av ljudet från cd-skivan och spara det i filer på din dator. Som standard lagras ljudfilerna under mappen <filename>Musik</filename> i din hemkatalog.</para>
+
+    <para>När du påbörjar extraheringen kommer <guibutton>Extrahera</guibutton>-knappen att ändras till en <guibutton>Stopp</guibutton>-knapp. Du kan klicka på denna knapp när som helst för att stoppa extraheringen.</para>
+
+    <para><application>Sound Juicer</application> indikerar vilket spår den för tillfället extraherar genom att visa en ikon vid sidan av spårnumret. Du kan även se det totala förloppet och ungefärlig tid kvar i statusraden i nederkant av fönstret.</para>
+
+    <para>Extrahering av en cd-skiva kan ta lång tid, beroende på hastigheten på din dator. Du kan utan problem minimera <application>Sound Juicer</application> eller flytta det till en annan arbetsyta för att fortsätta använda din dator under tiden ljudet extraheras.</para>
+  </section>
+
+  <section id="playing">
+    <title>Uppspelning</title>
+
+    <para><application>Sound Juicer</application> låter dig spela upp spåren på din cd-skiva direkt. För att påbörja uppspelningen av cd-skivan, klicka helt enkelt på knappen <guibutton>Spela</guibutton> eller tryck <keycombo><keycap>Ctrl</keycap><keycap>P</keycap></keycombo>. För att spela upp ett specifikt spår, markera spåret och klicka på <guibutton>Spela</guibutton> eller dubbelklicka helt enkelt på spåret.</para>
+
+    <para>När <application>Sound Juicer</application> spelar upp en cd-skiva, ändras <guibutton>Spela upp</guibutton>-knappen till en <guibutton>Paus</guibutton>-knapp. Du kan klicka på denna knapp när som helst för att pausa uppspelningen, och klicka på <guibutton>Spela upp</guibutton> igen för att fortsätta spela upp där du pausade.</para>
+
+    <para>Vid uppspelning visar <application>Sound Juicer</application> en draglist som visar positionen i det aktuella spåret. För att hoppa till en annan del av spåret, dra handtaget längs med listen och släpp.</para>
+  </section>
+
+  <section id="preferences">
+    <title>Inställningar</title>
+
+    <para>Inställningsfönstret låter dig kontrollera:</para>
+
+    <itemizedlist>
+      <listitem><para>Vilken cd-enhet som <application>Sound Juicer</application> använder, om du har fler än en enhet,</para></listitem>
+      <listitem><para>Huruvida cd-skivan ska matas ut eller inte när <application>Sound Juicer</application> är färdig med extraheringen,</para></listitem>
+      <listitem><para>Huruvida musikmappen ska öppnas eller inte när <application>Sound Juicer</application> är färdig med extraheringen,</para></listitem>
+      <listitem><para>Var de extraherade ljudfilerna är placerade på din dator,</para></listitem>
+      <listitem><para>Vilket system som ska användas för mapphierarkin i musikmappen,</para></listitem>
+      <listitem><para>Vilket format som används för spårnamnen för de extraherade ljudfilerna, och</para></listitem>
+      <listitem><para>Vilket filformat och kodek som används för de extraherade ljudfilerna.</para></listitem>
+    </itemizedlist>
+
+    <informalfigure>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/prefs.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase>Inställningsfönstret</phrase>
+          </textobject>
+        </mediaobject>
+      </screenshot>
+    </informalfigure>
+
+    <section id="prefs-drive">
+      <title>Val av cd-enhet</title>
+
+      <para>Om du har flera cd-enheter i din dator kan du välja vilken enhet som ska användas i rullgardinsmenyn <guilabel>CD-enhet</guilabel> under <guilabel>Enhet</guilabel>. Kryssrutorna <guibutton>Mata ut när färdig</guibutton> <guibutton>Öppna musikmapp när färdig</guibutton> låter dig kontrollera huruvida <application>Sound Juicer</application> ska mata ut cd-skivan från enheten och huruvida den ska öppna din musikmapp när den har slutfört extraheringen av ljudfilerna.</para>
+    </section>
+
+    <section id="prefs-naming">
+      <title>Namngivning av ljudfiler</title>
+
+      <para>Rullgardinsmenyn <guilabel>Musikmapp</guilabel> låter dig välja vilken mapp som din ljudfiler ska lagras i. Välj en av mapparna från listan, eller välj <guilabel>Annan</guilabel> för att välja en annan mapp med filväljaren. Som standard placeras filerna under mappen <filename>Musik</filename> i din hemkatalog.</para>
+
+      <para>Sektionen <guilabel>Spårnamn</guilabel> låter dig kontrollera hur filerna och mapparna namnges. <application>Sound Juicer</application> kan lagra ljudfiler i separata mappar, som hjälper dig att hålla din musik organiserad. Du kan välja hur dessa mappar skapas och namnges med rullgardinsmenyn <guilabel>Mapphierarki</guilabel>. Som standard skapar <application>Sound Juicer</application> en mapp för albumets artist och en undermapp för albumet.</para>
+
+      <para>Använd rullgardinsmenyn <guilabel>Filnamn</guilabel> för att välja hur ljudfilerna ska namnges. Som standard använder <application>Sound Juicer</application> spårnumret följts av ett streck och sedan spårtiteln.</para>
+
+      <para>Markera kryssrutan <guibutton>Ta bort specialtecken</guibutton> för att <application>Sound Juicer</application> ska ta bort eller ersätta tecken såsom blanksteg eller punkter i filnamnen. Detta är användbart om du planerar att lägga ljudfilerna på en bärbar enhet eller en annan dator som har begränsningar i filnamnen.</para>
+
+      <note><para>Även när <guibutton>Ta bort specialtecken</guibutton> inte är markerad, kommer <application>Sound Juicer</application> att ta bort tecknet <literal>/</literal> från filnamn. Detta tecken kan inte användas i något filnamn på UNIX, Linux och liknande system.</para></note>
+
+      <tip><para>I nederkant av sektionen <guilabel>Spårnamn</guilabel> visas en exempelsökväg. Denna visar dig hur ett filnamn kan se ut och var den placeras, enligt dina inställningar för <guilabel>Mapphierarki</guilabel>, <guilabel>Filnamn</guilabel> samt <guibutton>Ta bort specialtecken</guibutton>.</para></tip>
+    </section>
+
+    <section id="prefs-format">
+      <title>Välj ett format</title>
+
+      <para>Du kan välja vilken ljudfilformat som <application>Sound Juicer</application> ska använda för att lagra dina spår på din dator. Det finns ett antal tillgängliga format, var och en med sina egna fördelar. De tillgängliga formaten på din dator kan variera men följande val finns normalt sett tillgängliga:</para>
+
+      <variablelist>
+        <varlistentry>
+          <term>Cd-kvalitet, förstörande (Ogg multimedia)</term>
+          <listitem>
+            <para>Detta alternativ är valt som standard. <ulink url="http://www.vorbis.org/">Ogg Vorbis</ulink>, som många andra förstörande ljudformat (såsom MP3 och AAC) kastar bort viss information från ursprunglig ljuddata. Även om ljudfilen inte är en perfekt replika av cd-ljudet, är skillnaden ofta in hörbar hos de flesta lyssnarna. Som ett resultat av detta brukar förstörande format ofta ha mycket små filstorlekar.</para>
+
+            <para>Ogg Vorbis-formatet är det förstörande formatet som standard används i <application>Sound Juicer</application>. Ogg Vorbis är ett öppet format, utvecklat av <ulink url="http://xiph.org/">Xiph.Org Foundation</ulink>, som brukar producera mindre filstorlekar och ljud med högre kvalitet än många andra förstörande format. Då det inte är lika utbrett som det äldre MP3-formatet kan de flesta musikprogramvaror spela upp Ogg Vorbis-filer, och många hårdvaruspelare har byggt in stöd.</para>
+
+            <para>Xiph.Org underhåller listor för <ulink url="http://wiki.xiph.org/index.php/VorbisSoftwarePlayers">programvaruspelare</ulink>, <ulink url="http://wiki.xiph.org/index.php/PortablePlayers">bärbara hårdvaruspelare</ulink> och <ulink url="http://wiki.xiph.org/index.php/StaticPlayers">stationära hårdvaruspelare</ulink> som har stöd för Ogg Vorbis.</para>
+          </listitem>
+        </varlistentry>
+
+        <varlistentry>
+          <term>Cd-kvalitet, icke-förstörande (FLAC-ljud)</term>
+          <listitem>
+            <para>Ljudformatet <ulink url="http://flac.sourceforge.net/">FLAC</ulink> är ett icke-förstörande format. Ingen ljuddata förloras vid konvertering till FLAC, även om den komprimerar ljudfiler så mycket som 70%. FLAC och andra icke-förstörande format är populära i de fall där högkvalitativt ljud krävs, men filerna behöver komprimeras för att spara diskutrymme och nätverksöverföringstid.</para>
+          </listitem>
+        </varlistentry>
+
+        <varlistentry>
+          <term>Cd-kvalitet, AAC (MPEG 4-ljud)</term>
+          <listitem>
+            <para>Ljudformatet AAC (förkortning för Advanced Audio Coding) är ett standardformat med förluster. Det är en efterföljare till MP3-formatet och det erbjuder bättre ljudkvalitet än MP3-formatet. Många programvaruspelare och hårdvaruspelare har stöd för AAC-formatet.</para>
+          </listitem>
+        </varlistentry>
+
+        <varlistentry>
+          <term>Röst, icke-förstörande (WAV-ljud)</term>
+          <listitem>
+            <para>Utdataprofilen Röst producerar lågkvalitativa ljudfiler i mono. Du kanske önskar att välja denna för lektioner, ljudböcker och andra cd-skivor med tal, där tappad ljudkvalitet är mindre viktig.</para>
+          </listitem>
+        </varlistentry>
+        
+<varlistentry>
+          <term>MP3</term>
+          <listitem>
+            <para>Ljudformatet MP3 är ett format med förluster. Det stöds nästan överallt och är ett populärt format, speciellt på grund av dess användning i bärbara mediaspelare.</para>
+          </listitem>
+        </varlistentry>
+
+      </variablelist>
+
+      <para>Du kan klicka på knappen <guibutton>Redigera profiler</guibutton> för att redigera de tillgängliga ljudformaten. Profilredigerardialogen tillhandahåller direktåtkomst till ljudkonverteringen. Profiler definieras med rör i <application>GStreamer</application>. <application>GStreamer</application> är det underliggande multimediabiblioteket som används av <application>Sound Juicer</application> och andra multimediaprogram. En fullständig förklaring av ljudprofiler är utanför omfånget av detta dokument.</para>
+    </section>
+  </section>
+
+</article>

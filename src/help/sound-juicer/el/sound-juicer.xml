@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- -*- indent-tabs-mode: nil -*- -->
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN" "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd" [
+<!ENTITY app "Sound Juicer">
+<!ENTITY application "<application>&app;</application>">
+<!ENTITY appversion "2.22.0">
+<!ENTITY manrevision "2.22.0">
+<!ENTITY musicbrainz "<ulink url='http://www.musicbrainz.org/'>MusicBrainz</ulink>">
+]>
+<?gnome-doc-status Version: 2.12
+Status: Draft
+?>
+<article id="index" lang="el">
+  <articleinfo>
+    <title>Οδηγός <application>Sound·Juicer</application></title>
+    
+    <copyright>
+      <year>2003</year>
+      <holder>Mike Hearn (mike@theoretic.com)</holder>
+    </copyright>
+    <copyright>
+      <year>2005</year>
+      <holder>Shaun·McCance</holder>
+    </copyright>
+    <copyright>
+      <year>2008</year>
+      <holder>Andreas Freund</holder>
+    </copyright><copyright><year>2006</year><holder>Νικολάου Χαράλαμπος (babis85@freemail.gr)</holder></copyright>
+    
+    <publisher>
+      <publishername>Έργο Τεκμηρίωσης GNOME</publishername>
+    </publisher>
+
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+
+    <authorgroup>
+      <author>
+        <firstname>Andreas</firstname>
+        <surname>Freund</surname>
+        <affiliation>
+          <orgname>Google Highly Open Participation Contest</orgname>
+        </affiliation>
+      </author>
+      <author>
+        <firstname>Mike</firstname>
+        <surname>Hearn</surname>
+        <email>mike@theoretic.com</email>
+      </author>
+      <author role="maintainer">
+        <firstname>Shaun</firstname>
+        <surname>McCance</surname>
+        <affiliation>
+          <orgname>Έργο Τεκμηρίωσης GNOME</orgname>
+        </affiliation>
+        <email>shaunm@gnome.org</email>
+      </author>
+    </authorgroup>
+
+    <revhistory>
+      <revision>
+        <revnumber>2.22.0</revnumber>
+        <date>2008-01-12</date>
+        <revdescription>
+          <para role="author">Andreas Freund</para>
+          <para role="publisher">Έργο Τεκμηρίωσης GNOME</para>
+        </revdescription>
+      </revision>
+      <revision>
+        <revnumber>2.10</revnumber>
+        <date>2005-03-06</date>
+        <revdescription>
+          <para role="author">Shaun·McCance</para>
+          <para role="publisher">Έργο Τεκμηρίωσης GNOME</para>
+        </revdescription>
+      </revision>
+      <revision>
+        <revnumber>2.0</revnumber>
+        <date>2003-07-06</date>
+        <revdescription>
+          <para role="author">Mike·Hearn·<email>mike@theoretic.com</email></para>
+          <para role="publisher">Έργο Τεκμηρίωσης GNOME</para>
+        </revdescription>
+      </revision>
+    </revhistory>
+    <!-- Translators may also add here feedback address for translations -->
+
+    <abstract role="description">
+      <para>Το <application>Sound Juicer</application> είναι ένα απλό και καθαρό εργαλείο εξαγωγής CD. Σας επιτρέπει να εξάγετε τον ήχο από τους συμπαγείς δίσκους ήχου και να τους μετατρέπετε σε αρχεία ήχου που μπορεί να καταλάβει και να αναπαράγει ο υπολογιστής.</para>
+    </abstract>
+  </articleinfo>
+
+  <section id="intro">
+    <title>Εισαγωγή</title>
+    <anchor id="aboutex"/>
+    <anchor id="notice"/>
+    <indexterm>
+      <primary>Sound Juicer</primary>
+      <secondary>Οδηγός</secondary>
+      <tertiary>sound-juicer</tertiary>
+    </indexterm>
+
+    <para>Το <application>Sound Juicer</application> είναι ένα απλό και καθαρό εργαλείο εξαγωγής CD. Σας επιτρέπει να εξάγετε τον ήχο από τους συμπαγείς δίσκους ήχου και να τους μετατρέπετε σε αρχεία ήχου που μπορεί να καταλάβει και να αναπαράγει ο υπολογιστής σου. Το <application>Sound Juicer</application> μπορεί ακόμα να αναπαράγει τα κομμάτια ήχου κατευθείαν από το CD, επιτρέποντάς σας να προεπισκοπήσετε το CD πριν το εξάγετε.</para>
+
+    <para>Το <application>Sound Juicer</application> είναι σχεδιασμένο για να είναι εύκολο στη χρήση του, και να εργάζεται με μικρή μεσολάβηση του χρήστη. Όταν ξεκινήσετε το <application>Sound Juicer</application>, θα εξετάσει το CD στον οδηγό και θα προσπαθήσει να εντοπίσει τις πληροφορίες για τα κομμάτια ήχου χρησιμοποιώντας την ελεύθερα-διαθέσιμη υπηρεσία <ulink url="http://www.musicbrainz.org/">MusicBrainz</ulink>.</para>
+
+    <informalfigure>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/startup.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase><application>Sound Juicer</application> κατά την εκκίνηση</phrase>
+          </textobject>
+        </mediaobject>
+      </screenshot>
+    </informalfigure>
+  </section>
+
+  <section id="track-data">
+    <title>Εισαγωγή Δεδομένων Κομματιών</title>
+
+    <para>Όταν εισάγετε ένα CD ήχου, το <application>Sound Juicer</application> θα ανακτήσει αυτόματα τα δεδομένα των κομματιών από το <ulink url="http://www.musicbrainz.org/">MusicBrainz</ulink>. Το MusicBrainz είναι μία ελεύθερη υπηρεσία η οποία παρέχει μία βάση δεδομένων για τα περισσότερα εκδιδόμενα CDs. Το <application>Sound Juicer</application> χρησιμοποιεί το σειριακό αριθμό του CD και τις θέσεις και τα μήκη των κομματιών για να τα ταιριάξει με τα CD της βάσης δεδομένων του MusicBrainz.</para>
+
+    <para>Περιστασιακά, περισσότερα από ένα CD θα έχουν την ίδια δόμηση. Εάν βρεθούν περισσότερα από ένα CD το <application>Sound Juicer</application> θα παρουσιάσει ένα παράθυρο διαλόγου επιτρέποντάς σας να διαλέξετε το CD που θα χρησιμοποιήσετε. Εάν εντοπιστεί λάθος CD ή εάν το <ulink url="http://www.musicbrainz.org/">MusicBrainz</ulink> δεν περιέχει κανένα CD που να ταιριάζει, θα πρέπει να εισαγάγετε τις πληροφορίες των κομματιών χειροκίνητα. Επίσης, αν επιλέξετε, μπορείτε να προσθέσετε την πληροφορία για το CD στη βάση δεδομένων <ulink url="http://www.musicbrainz.org/">MusicBrainz</ulink> με ένα πλαίσιο που θα εμφανιστεί.</para>
+
+    <para>Το πάνω μέρος του παραθύρου περιέχει κουτιά κειμένου για την ονομασία, τον καλλιτέχνη, το έτος και το είδος του CD. Ακολουθεί ένας κατάλογος των κομματιών ήχου του CD. Μπορείτε να θέσετε την ονομασία και τον καλλιτέχνη για κάθε κομμάτι. Το <application>Sound Juicer</application> χρησιμοποιεί αυτή τη πληροφορία για να ονομάσει τα αρχεία και τους φακέλους όπου αποθηκεύεται η μουσική. Οι πληροφορίες του κομματιού και του λευκώματος κωδικοποιούνται στα αρχεία ήχου. Πολλοί αναπαραγωγείς μουσικής, συμπεριλαμβανομένων των φορητών συσκευών, χρησιμοποιούν αυτές τις πληροφορίες για να οργανώσουν και να εμφανίσουν τα αρχεία ήχου.</para>
+
+    <para>Για να επεξεργαστείτε τον τίτλο του κομματιού, πρώτα επιλέξτε το κομμάτι, μετά κάντε κλικ στον τίτλο. Όταν τελειώσετε εισάγοντας τον τίτλο, πατήστε το κουμπί του πληκτρολογίου <keycap>Enter</keycap>, ή κάντε κλικ έξω από τον τίτλο.</para>
+
+    <para>Όταν επεξεργάζεστε τον καλλιτέχνη του CD, ο καλλιτέχνης κάθε κομματιού ενημερώνετε αυτόματα, αλλά μόνο αν έχουν ταιριασθεί πριν την αλλαγή (έτσι ώστε αλλάζοντας τον καλλιτέχνη του λευκώματος μιας μεταγλώττισης δεν αλλάζει όλους τους καλλιτέχνες των κομματιών). Τα περισσότερα CDS είναι με μοναδικό καλλιτέχνη και αυτό το χαρακτηριστικό σας κερδίζει χρόνο από την εισαγωγή καλλιτέχνη σε κάθε κομμάτι.</para>
+
+    <para>Μερικά CDs, παρ' όλα αυτά, είναι συλλογές κομματιών από διαφορετικούς καλλιτέχνες. Για τέτοιου είδους CDs, θα πρέπει να εισάγετε τον καλλιτέχνη για κάθε κομμάτι. Για να θέσετε τον καλλιτέχνη για κάθε κομμάτι, πρώτα επιλέξτε το κομμάτι, μετά κάντε κλικ στον καλλιτέχνη. Μπορείτε να θέσετε ως καλλιτέχνη για το CD την τιμή "Διάφορα" ή απλά να την αφήσετε κενή, εξαρτώντας στο πώς προτιμάτε να οργανώνετε τη μουσική σας.</para>
+
+    <tip>
+      <title>Εισαγωγή δεδομένων κομματιών μόνο με το πληκτρολόγιο</title>
+      <para>Μπορείτε να εισάγετε δεδομένα κομματιών χωρίς να χρησιμοποιήσετε το ποντίκι. Χρησιμοποιήστε τα βελάκια πάνω και κάτω για να εστιάσετε στον τίτλο ή τον καλλιτέχνη. Πιέστε το πλήκτρο διαστήματος για να αρχίσετε να επεξεργάζεστε τον τίτλο ή τον καλλιτέχνη, και πιέστε <keycap>Enter</keycap> μόλις τελειώσετε.</para>
+    </tip>
+
+    <para>Ο σύνδεσμος <ulink url="http://www.musicbrainz.org/">MusicBrainz</ulink> δυστυχώς δεν παρέχει δεδομένα είδων μουσικής, αλλά το <application>Sound Juicer</application> περιλαμβάνει διάφορα αποθηκευμένα είδη μουσικής:</para>
+
+    <anchor id="genres"/>
+    <itemizedlist>
+      <listitem><para>Ατμοσφαιρική</para></listitem>
+      <listitem><para>Μπλουζ</para></listitem>
+      <listitem><para>Κλασική</para></listitem>
+      <listitem><para>Παραδοσιακή</para></listitem>
+      <listitem><para>Χορευτική</para></listitem>
+      <listitem><para>Ηλεκτρονική</para></listitem>
+      <listitem><para>Φολκ</para></listitem>
+      <listitem><para>Φανκ</para></listitem>
+      <listitem><para>Τζαζ</para></listitem>
+      <listitem><para>Λάτιν</para></listitem>
+      <listitem><para>Ποπ</para></listitem>
+      <listitem><para>Ραπ</para></listitem>
+      <listitem><para>Ρέγγε</para></listitem>
+      <listitem><para>Ροκ</para></listitem>
+      <listitem><para>Σόουλ</para></listitem>
+      <listitem><para>Αναπαραγόμενη λέξη</para></listitem>
+    </itemizedlist>
+
+    <tip><para>Αν επιλέξετε να δημιουργήσετε ένα προσαρμοσμένο είδος μουσικής, αυτό θα αποθηκευτεί και για μελλοντική χρήση.</para></tip>
+
+  </section>
+
+  <section id="extracting">
+    <title>Εξαγωγή</title>
+    <anchor id="using"/>
+
+    <para>Εξ' ορισμού, το <application>Sound Juicer</application> θα εξάγει όλα τα κομμάτια του CD σε αρχεία ήχου. Εάν δεν επιθυμείτε να εξάγετε όλα τα κομμάτια, μπορείτε να επιλέξετε ποια κομμάτια θέλετε να εξαχθούν χρησιμοποιώντας τα πλαίσια ελέγχου στην πρώτη στήλη της λίστας των κομματιών.</para>
+
+    <para>Μπορείτε επίσης να χρησιμοποιήσετε τα αντικείμενα του μενού <menuchoice><guimenu>Επεξεργασία</guimenu><guimenuitem>Επιλογή Όλων</guimenuitem></menuchoice> και <menuchoice><guimenu>Επεξεργασία</guimenu><guimenuitem>Αποεπιλογή Όλων</guimenuitem></menuchoice> για να επιλέξετε όλα ή κανένα από τα κομμάτια προς εξαγωγή.</para>
+
+    <para>Εφόσον έχετε εισάγει όλες τις πληροφορίες που χρειάζεστε, κάντε κλικ στο κουμπί <guibutton>Εξαγωγή</guibutton>, ή πατήστε <keycombo><keycap>Ctrl</keycap><keycap>Enter</keycap></keycombo>. Το <application>Sound Juicer</application> θα ξεκινήσει το διάβασμα του ήχου από το CD και την αποθήκευση του σε αρχεία στον υπολογιστή σας. Εξ' ορισμού, τα αρχεία ήχου αποθηκεύονται στον κατάλογο <filename>Μουσική</filename> στον αρχικό σας κατάλογο.</para>
+
+    <para>Όταν αρχίσετε την εξαγωγή, το κουμπί <guibutton>Εξαγωγή</guibutton> θα αλλάξει στο κουμπί <guibutton>Διακοπή</guibutton>. Μπορείτε να κάνετε κλικ σε αυτό το κουμπί οποιαδήποτε στιγμή για να σταματήσετε την εξαγωγή.</para>
+
+    <para>Το <application>Sound Juicer</application> υποδεικνύει ποιο κομμάτι εξάγεται την στιγμή εκείνη επιδεικνύοντας ένα εικονίδιο δίπλα στον αριθμό του κομματιού. Μπορείτε επίσης να δείτε την ολική πρόοδο και την εκτίμηση του χρόνου που απομένει στη γραμμή κατάστασης στο κάτω μέρος του παραθύρου.</para>
+
+    <para>Η εξαγωγή ενός CD μπορεί να διαρκέσει αρκετό χρόνο, εξαρτώμενη από την ταχύτητα του υπολογιστή σας. Μπορείτε να ελαχιστοποιήσετε το <application>Sound Juicer</application> με ασφάλεια ή να το μετακινήσετε σε διαφορετικό χώρο εργασίας για να συνεχίσετε να χρησιμοποιείτε τον υπολογιστή σας ενώ εξάγεται ο ήχος.</para>
+  </section>
+
+  <section id="playing">
+    <title>Αναπαραγωγή</title>
+
+    <para>Το <application>Sound Juicer</application> σας επιτρέπει να αναπαράγετε άμεσα τα κομμάτια του CD. Για να αρχίσει η αναπαραγωγή του CD, απλά κάντε κλικ στο κουμπί <guibutton>Αναπαραγωγή</guibutton>, ή πατήστε <keycombo><keycap>Ctrl</keycap><keycap>P</keycap></keycombo>. Για να αναπαράγετε ένα συγκεκριμένο κομμάτι, επιλέξτε το κομμάτι αυτό και κάντε κλικ στο κουμπί <guibutton>Αναπαραγωγή</guibutton>, ή απλά κάντε διπλό κλικ στο κομμάτι.</para>
+
+    <para>Όταν το <application>Sound Juicer</application> αναπαράγει ένα CD, το κουμπί <guibutton>Αναπαραγωγή</guibutton> αλλάζει στο κουμπί <guibutton>Παύση</guibutton>. Μπορείτε να κάνετε κλικ σε αυτό οποιαδήποτε στιγμή για να διακόψετε την αναπαραγωγή, και να ξανακάνετε κλικ στο κουμπί <guibutton>Αναπαραγωγή</guibutton> για να συνεχίσετε την αναπαραγωγή από εκεί που είχατε μείνει.</para>
+
+    <para>Κατά την αναπαραγωγή, το <application>Sound Juicer</application> εμφανίζει μία γραμμή ολίσθησης που δείχνει την θέση του κομματιού που α αναπαράγεται. Για να επιζητήσετε αλλό τμήμα του κομματιού, σύρετε τη λαβή κατά μήκος της γραμμής ολίσθησης και απελευθερώστε.</para>
+  </section>
+
+  <section id="preferences">
+    <title>Προτιμήσεις</title>
+
+    <para>Το παράθυρο προτιμήσεων σας επιτρέπει να ελέγξετε:</para>
+
+    <itemizedlist>
+      <listitem><para>Ποιον οδηγό CD χρησιμοποιεί το <application>Sound Juicer</application>, εάν έχετε περισσότερους από έναν οδηγό,</para></listitem>
+      <listitem><para>Κατά πόσο πρέπει να αποβάλει το CD  όταν το <application>Sound Juicer</application> έχει ολοκληρώσει την εξαγωγή.</para></listitem>
+      <listitem><para>Αν θα ανοίγεται  ή όχι ο μουσικός φάκελος με τα εξαγμένα κομμάτα όταν το <application>Sound Juicer</application> ολοκληρώσει την εξαγωγή.</para></listitem>
+      <listitem><para>Πού τοποθετούνται τα αρχεία ήχου που εξάγονται, και</para></listitem>
+      <listitem><para>Ποιό σύστημα θα χρησιμοποιείται για την ιεραρχία του φακέλου μέσα στο μουσικό φάκελο.</para></listitem>
+      <listitem><para>Ποια μορφή αρχείου πρέπει να χρησιμοποιηθεί για τα ονόματα των κομματιών από τα εξαγώμενα αρχεία ήχου, και</para></listitem>
+      <listitem><para>Ποια μορφή αρχείου και κωδικοποιητή χρησιμοποιείται για την εξαγωγή των αρχείων ήχου.</para></listitem>
+    </itemizedlist>
+
+    <informalfigure>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/prefs.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase>Παράθυρο προτιμήσεων</phrase>
+          </textobject>
+        </mediaobject>
+      </screenshot>
+    </informalfigure>
+
+    <section id="prefs-drive">
+      <title>Επιλέγοντας έναν οδηγό CD</title>
+
+      <para>Εάν έχετε πολλούς οδηγούς CD στον υπολογιστή σας, ο αναπτυσόμενος καταλόγος με ονομασία <guilabel>Οδηγός CD</guilabel> κάτω από τη <guilabel>Συσκευή</guilabel> σας επιτρέπει να επιλέξετε ποιον οδηγό θα χρησιμοποιήσετε. Το πλαίσια ελέγχου <guibutton>Αποβολή κατά την ολοκλήρωση</guibutton> και <guibutton>Άνοιγμα φακέλου μουσικής κατά την ολοκλήρωση</guibutton> σας επιτρέπει να χειριστείτε κατά πόσον το <application>Sound Juicer</application> θα αποβάλει το CD από τον οδηγό, όταν θα ολοκληρωθεί η εξαγωγή των αρχείων ήχου.</para>
+    </section>
+
+    <section id="prefs-naming">
+      <title>Ονομασία Αρχείων Ήχου</title>
+
+      <para>Η αναδυόμενη προς τα κάτω λίστα <guilabel>Φάκελος Μουσικής</guilabel> σας επιτρέπει να επιλέξετε σε ποιον φάκελο θα αποθηκεύσετε τα αρχεία ήχου. Επιλέξτε κάποιον από τους φακέλους της λίστας, ή επιλέξτε <guilabel>Άλλο</guilabel> για να επιλέξετε άλλον φάκελο με τον επιλογέα αρχείου. Εξ' ορισμού, τα αρχεία τοποθετούνται στον φάκελο <filename>Μουσική</filename> στον γονικό κατάλογο.</para>
+
+      <para>Το τμήμα <guilabel>Ονόματα Κομματιών</guilabel> σας επιτρέπει να ελέγξετε πώς θα ονομάζονται τα αρχεία και οι φάκελοι. Το <application>Sound Juicer</application> μπορεί να αποθηκεύσει αρχεία ήχου σε ξεχωριστούς φακέλους, βοηθώντας σας να συντηρήσετε την μουσική σας οργανωμένη. Μπορείτε να επιλέξετε πώς θα δημιουργούνται και ονομάζονται αυτοί οι φάκελοι χρησιμοποιώντας την αναδυόμενη προς τα κάτω λίστα <guilabel>Ιεραρχία Φακέλου</guilabel>. Εξ' ορισμού, το <application>Sound Juicer</application> δημιουργεί έναν φάκελο για τον καλλιτέχνη του άλμπουμ και έναν υποφάκελο για το άλμπουμ.</para>
+
+      <para>Χρησιμοποιήστε την προς τα κάτω αναδυόμενη λίστα <guilabel>Όνομα αρχείου</guilabel> για να επιλέξετε πώς θα ονομάζονται τα αρχεία ήχου. Εξ' ορισμού, το <application>Sound Juicer</application> χρησιμοποιεί τον αριθμό του κομματιού ακολουθούμενο από μία παύλα και τον τίτλο του κομματιού.</para>
+
+      <para>Επιλέξτε το κουτί <guibutton>Αφαίρεση ειδικών χαρακτήρων</guibutton> για να κάνετε το <application>Sound Juicer</application> να απομακρύνει ή να αντικαταστήσει χαρακτήρες όπως τα κενά και τα σημεία στίξης στα ονόματα αρχείων. Αυτό είναι χρήσιμο εάν σχεδιάζετε να βάλετε τα αρχεία ήχου σε μία φορητή συσκευή ή σε άλλον υπολογιστή ο οποίος έχει περισσότερες περιορισμούς στα ονόματα των αρχείων.</para>
+
+      <note><para>Ακόμα και όταν η <guibutton>Αφαίρεση ειδικών χαρακτήρων</guibutton> δεν είναι επιλεγμένη, το <application>Sound Juicer</application> θα απομακρύνει τον χαρακτήρα <literal>/</literal> από τα ονόματα αρχείων. Αυτός ο χαρακτήρας δεν μπορεί να χρησιμοποιηθεί σε κανένα όνομα αρχείου στο UNIX, Linux, και σε άλλα παρόμοια συστήματα.</para></note>
+
+      <tip><para>Στο τέλος της παραγράφου <guilabel>Ονόματα κομματιών</guilabel>, εμφανίζεται ένα παράδειγμα μονοπατιού. Αυτό σας επιτρέπει να γνωρίζετε πώς μπορεί να μοιάζει ένα όνομα αρχείου και πού είναι τοποθετημένο, σύμφωνα με τις ρυθμίσεις σας για την <guilabel>Ιεραρχία φακέλων</guilabel>, το <guilabel>Όνομα αρχείου</guilabel>, και τους <guibutton>Ειδικούς χαρακτήρες αφαίρεσης</guibutton>.</para></tip>
+    </section>
+
+    <section id="prefs-format">
+      <title>Επιλέγοντας Μορφή</title>
+
+      <para>Μπορείτε να επιλέξετε ποια μορφή αρχείου ήχου το <application>Sound Juicer</application> να χρησιμοποιεί για να αποθηκεύσει τα κομμάτια στο υπολογιστή σας. Υπάρχει ένας αριθμός από διαθέσιμες μορφές, κάθε μία με τα δικά της πλεονεκτήματα. Οι διαθέσιμες μορφές στον υπολογιστή σας μπορεί να ποικίλουν, αλλά οι επόμενες επιλογές είναι συνήθως διαθέσιμες: </para>
+
+      <variablelist>
+        <varlistentry>
+          <term>Ποιότητα CD, απωλεστική (ήχος Ogg)</term>
+          <listitem>
+            <para>Αυτή η επιλογή είναι προεπιλεγμένη. Το <ulink url="http://www.vorbis.org/">Ogg Vorbis</ulink>, όπως και άλλες απωλεστικές μορφές ήχου (όπως το MP3 και το AAC) απορρίπτει μερικές πληροφορίες από τα αυθεντικά δεδομένα ήχου. Αν και το αρχείο ήχου δεν είναι τέλειο πανομοιότυπο του CD ήχου, οι διαφορές δεν είναι διακριτές από τους περισσότερους ακροατές. Σαν αποτέλεσμα, οι απωλεστικές μορφές τείνουν να έχουν πολύ μικρά μεγέθη αρχείων.</para>
+
+            <para>Η Ogg Vorbis μορφή είναι η προεπιλεγμένη απωλεστική μορφή που χρησιμοποιείται στο <application>Sound Juicer</application>. Το Ogg Vorbis είναι μία ανοιχτή μορφή, αναπτυγμένος από το <ulink url="http://xiph.org/">Ίδρυμα Xiph.Org</ulink>, το οποίο τείνει να παράγει μικρότερα μεγέθη αρχείων και υψηλότερης ποιότητας ήχο από ότι πολλές άλλες απωλεστικές μορφές. Παρ' όλο που δεν είναι τόσο διαδεδομένο όσο η παλιότερη μορφή MP3, τα περισσότερα λογισμικά ήχου μπορούν να αναπαράγουν αρχεία Ogg Vorbis, και πολλά μηχανήματα αναπαραγωγής έχουν ενσωματωμένη υποστήριξη.</para>
+
+            <para>Το Xiph.Org διατηρεί λίστες από <ulink url="http://wiki.xiph.org/index.php/VorbisSoftwarePlayers">αναπαραγωγείς λογισμικού</ulink>, <ulink url="http://wiki.xiph.org/index.php/PortablePlayers">φορητά μηχανήματα αναπαραγωγέων</ulink>, και <ulink url="http://wiki.xiph.org/index.php/StaticPlayers">στατικά μηχανήματα αναπαραγωγέων</ulink> οι οποίοι υποστηρίζουν το Ogg Vorbis.</para>
+          </listitem>
+        </varlistentry>
+
+        <varlistentry>
+          <term>Ποιότητα CD, μη απωλεστική (ήχος FLAC)</term>
+          <listitem>
+            <para>Η μορφή ήχου <ulink url="http://flac.sourceforge.net/">FLAC</ulink> είναι μία μη απωλεστική μορφή. Κανένα δεδομένο ήχου δεν χάνεται μετατρεπόμενο σε FLAC, αν και συμπιέζει τα αρχεία ήχου κατά 70%. Το FlAC και άλλες μη απωλεστικές μορφές είναι δημοφιλή σε περιπτώσεις όπου χρειάζεται υψηλής πιστότητας ήχος, αλλά και αρχεία που χρειάζεται να συμπιεσθούν για εξοικονόμηση χώρου στο δίσκο και χρόνου μεταφοράς σε δίκτυα.</para>
+          </listitem>
+        </varlistentry>
+
+        <varlistentry>
+          <term>Ποιότητα CD, AAC (ήχος MPEG-4)</term>
+          <listitem>
+            <para>Η μορφή ήχου AAC (συντμογραφία για το Advanced Audio Coding) είναι μια τυποποιημένη απωλστική μορφή. Είναι απόγονος της μορφής MP3 και πετυχαίνει καλύτερη ποιότητα ήχου από τη μορφή MP3. Πολλοί αναπαραγωγείς λογισμικού και υλισμικού υποστηρίζουν τη μορφή AAC.</para>
+          </listitem>
+        </varlistentry>
+
+        <varlistentry>
+          <term>Φωνή, μη απωλεστική (ήχος WAV)</term>
+          <listitem>
+            <para>Η έξοδος του προφίλ Ομιλία παράγει χαμηλής-ποιότητας μονοφωνικών αρχείων ήχου. Μπορείτε να επιθυμήσετε να το επιλέξετε για διαλέξεις, βιβλία σε κασέτες, και άλλες εκφωνημένες λέξεις σε CDs, όπου η απώλεια στην ποιότητα του ήχου είναι μικρότερης σημασίας.</para>
+          </listitem>
+        </varlistentry>
+        
+<varlistentry>
+          <term>MP3</term>
+          <listitem>
+            <para>Η μορφή ήχου MP3  είναι μια απωλεστική μορφή. Υποστηρίζεται πολύ και είναι δημοφιλής, ειδικά εξαιτίς της χρήσης του για φορητούς αναπαραγωγείς ήχων.</para>
+          </listitem>
+        </varlistentry>
+
+      </variablelist>
+
+      <para>Μπορείτε να κάνετε κλικ στο κουμπί <guibutton>Επεξεργασία Προφίλ</guibutton> για να επεξεργαστείτε τις διαθέσιμες μορφές ήχου. Ο διαλογικός επεξεργαστής προφίλ παρέχει άμεση πρόσβαση στη μετατροπή του ήχου. Τα προφίλ ορίζονται με τα άμεσο κανάλια πληροφόρησης <application>GStreamer</application>. Το <application>GStreamer</application> είναι η θεμελιώδης βιβλιοθήκη πολυμέσων που χρησιμοποιείται από το <application>Sound Juicer</application> και από άλλες εφαρμογές πολυμέσων. Μία πλήρης εξήγηση των προφίλ ήχου είναι έξω από το σκοπό αυτού του εγγράφου.</para>
+    </section>
+  </section>
+
+</article>

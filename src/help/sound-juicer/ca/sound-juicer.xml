@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- -*- indent-tabs-mode: nil -*- -->
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN" "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd" [
+<!ENTITY app "Sound Juicer">
+<!ENTITY application "<application>&app;</application>">
+<!ENTITY appversion "2.22.0">
+<!ENTITY manrevision "2.22.0">
+<!ENTITY musicbrainz "<ulink url='http://www.musicbrainz.org/'>MusicBrainz</ulink>">
+]>
+<?gnome-doc-status Version: 2.12
+Status: Draft
+?>
+<article id="index" lang="ca">
+  <articleinfo>
+    <title>Manual del <application>Sound Juicer</application></title>
+    
+    <copyright>
+      <year>2003</year>
+      <holder>Mike Hearn (mike@theoretic.com)</holder>
+    </copyright>
+    <copyright>
+      <year>2005</year>
+      <holder>Shaun McCance</holder>
+    </copyright>
+    <copyright>
+      <year>2008</year>
+      <holder>Andreas Freund</holder>
+    </copyright><copyright><year>2008</year><holder>Joan Duran (jodufi@gmail.com)</holder></copyright>
+    
+    <publisher>
+      <publishername>Projecte de documentació del GNOME</publishername>
+    </publisher>
+
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+
+    <authorgroup>
+      <author>
+        <firstname>Andreas</firstname>
+        <surname>Freund</surname>
+        <affiliation>
+          <orgname>Concurs de participació oberta del Google</orgname>
+        </affiliation>
+      </author>
+      <author>
+        <firstname>Mike</firstname>
+        <surname>Hearn</surname>
+        <email>mike@theoretic.com</email>
+      </author>
+      <author role="maintainer">
+        <firstname>Shaun</firstname>
+        <surname>McCance</surname>
+        <affiliation>
+          <orgname>Projecte de documentació del GNOME</orgname>
+        </affiliation>
+        <email>shaunm@gnome.org</email>
+      </author>
+    </authorgroup>
+
+    <revhistory>
+      <revision>
+        <revnumber>2.22.0</revnumber>
+        <date>12-01-2008</date>
+        <revdescription>
+          <para role="author">Andreas Freund</para>
+          <para role="publisher">Projecte de documentació del GNOME</para>
+        </revdescription>
+      </revision>
+      <revision>
+        <revnumber>2.10</revnumber>
+        <date>06-03-2005</date>
+        <revdescription>
+          <para role="author">Shaun McCance</para>
+          <para role="publisher">Projecte de documentació del GNOME</para>
+        </revdescription>
+      </revision>
+      <revision>
+        <revnumber>2.0</revnumber>
+        <date>06-07-2003</date>
+        <revdescription>
+          <para role="author">Mike Hearn <email>mike@theoretic.com</email></para>
+          <para role="publisher">Projecte de documentació del GNOME</para>
+        </revdescription>
+      </revision>
+    </revhistory>
+    <!-- Translators may also add here feedback address for translations -->
+
+    <abstract role="description">
+      <para>El <application>Sound Juicer</application> és una eina d'extracció de CD fàcil d'utilitzar. Us permet extraure l'àudio dels discs compactes d'àudio i convertir-los en fitxers d'àudio que l'ordinador pot entendre i reproduir.</para>
+    </abstract>
+  </articleinfo>
+
+  <section id="intro">
+    <title>Introducció</title>
+    <anchor id="aboutex"/>
+    <anchor id="notice"/>
+    <indexterm>
+      <primary>Sound Juicer</primary>
+      <secondary>Manual</secondary>
+      <tertiary>sound-juicer</tertiary>
+    </indexterm>
+
+    <para>El <application>Sound Juicer</application> és una eina d'extracció de CD fàcil d'utilitzar. Us permet extraure l'àudio dels discs compactes d'àudio i convertir-los en fitxers d'àudio que l'ordinador pot entendre i reproduir. El <application>Sound Juicer</application> també pot reproduir directament les pistes d'àudio del CD, permetent-vos escoltar el CD abans d'extraure'l.</para>
+
+    <para>El <application>Sound Juicer</application> s'ha dissenyat per a un ús fàcil i que requereixi poca intervenció de l'usuari. Quan inicieu el <application>Sound Juicer</application>, aquest inspeccionarà la unitat de CD i intentarà trobar informació sobre les pistes d'àudio utilitzant el servei disponible de forma gratuïta <ulink url="http://www.musicbrainz.org/">MusicBrainz</ulink>.</para>
+
+    <informalfigure>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/startup.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase><application>Sound Juicer</application> en iniciar</phrase>
+          </textobject>
+        </mediaobject>
+      </screenshot>
+    </informalfigure>
+  </section>
+
+  <section id="track-data">
+    <title>Introducció de les dades de la pista</title>
+
+    <para>Quan inseriu un CD d'àudio, el <application>Sound Juicer</application> obtindrà automàticament les dades de les pistes des del <ulink url="http://www.musicbrainz.org/">MusicBrainz</ulink>. El <ulink url="http://www.musicbrainz.org/">MusicBrainz</ulink> és un servei gratuït que proporciona una base de dades per a la majoria dels CD publicats. El <application>Sound Juicer</application> utilitza el número de sèrie del CD i les posicions i longituds de les pistes per a trobar el CD en la base de dades del <ulink url="http://www.musicbrainz.org/">MusicBrainz</ulink>.</para>
+
+    <para>A vegades, més d'un CD tindrà el mateix format. Si es troba més d'un CD, el <application>Sound Juicer</application> mostrarà un diàleg on us permetrà triar quines dades de CD utilitzar. Si es detecta un CD incorrecte o si el <ulink url="http://www.musicbrainz.org/">MusicBrainz</ulink> no conté cap CD que coincideixi, haureu d'introduir manualment la informació de les pistes. També, si voleu, podeu afegir la informació del CD a la base de dades del <ulink url="http://www.musicbrainz.org/">MusicBrainz</ulink>.</para>
+
+    <para>La finestra superior conté quadres de text per al títol, l'artista, l'any i el gènere del CD. A sota hi ha una llista amb les pistes d'àudio del CD. Podeu establir el títol de la pista i de l'artista de cada pista. El <application>Sound Juicer</application> utilitza aquesta informació per a anomenar els fitxers i les carpetes on s'emmagatzema la música. La informació de la pista i de l'àlbum es codifica directament en els fitxers d'àudio. Molts reproductors de música, inclosos els dispositius portàtils, utilitzen aquesta informació per a organitzar i mostrar els fitxers d'àudio.</para>
+
+    <para>Per a editar el títol d'una pista, seleccioneu primer la pista i després feu clic en el títol. Quan acabeu d'introduir el títol, premeu la tecla <keycap>Retorn</keycap> del teclat, o feu clic fora del títol.</para>
+
+    <para>Quan editeu l'artista del CD, s'actualitzarà automàticament l'artista de cada pista, però només si coincidien abans del canvi (de manera que canviar l'artista de l'àlbum d'una compilació no canvia tots els artistes de les pistes). La majoria de CD són d'un artista, i aquesta funcionalitat us estalviarà el temps d'introduir-lo a cada pista.</para>
+
+    <para>Tot i això, alguns CD són compilacions de cançons de diferents artistes. Per aquests CD, haureu d'introduir l'artista de cada pista. Per a establir l'artista d'una pista, seleccioneu primer la pista i després feu clic en l'artista. Podeu establir l'artista del CD com a «Varis» o simplement deixar-lo en blanc, depenent de com preferiu organitzar la música.</para>
+
+    <tip>
+      <title>Entering Track Data With the Keyboard Only</title>
+      <para>You can enter track data without using the mouse.  Use the up and
+      down arrow keys to select a track, and the left and right arrow keys to
+      focus the title or artist.  Press the space bar to begin editing the
+      title or artist, and press <keycap>Enter</keycap> when finished.</para>
+    </tip>
+
+    <para>Malauradament el <ulink url="http://www.musicbrainz.org/">MusicBrainz</ulink> no proporciona les dades del gènere, però el <application>Sound Juicer</application> inclou diversos gèneres típics:</para>
+
+    <anchor id="genres"/>
+    <itemizedlist>
+      <listitem><para>Ambient</para></listitem>
+      <listitem><para>Blues</para></listitem>
+      <listitem><para>Clàssic</para></listitem>
+      <listitem><para>Country</para></listitem>
+      <listitem><para>Dance</para></listitem>
+      <listitem><para>Electrònica</para></listitem>
+      <listitem><para>Folk</para></listitem>
+      <listitem><para>Funk</para></listitem>
+      <listitem><para>Jazz</para></listitem>
+      <listitem><para>Llatí</para></listitem>
+      <listitem><para>Pop</para></listitem>
+      <listitem><para>Rap</para></listitem>
+      <listitem><para>Reggae</para></listitem>
+      <listitem><para>Rock</para></listitem>
+      <listitem><para>Soul</para></listitem>
+      <listitem><para>Parlat</para></listitem>
+    </itemizedlist>
+
+    <tip><para>If you choose to make a custom genre, it will be remembered in the future.</para></tip>
+
+  </section>
+
+  <section id="extracting">
+    <title>Extracció</title>
+    <anchor id="using"/>
+
+    <para>De manera predeterminada, el <application>Sound Juicer</application> extraurà totes les pistes des del CD a fitxers d'àudio. Si no voleu extreure totes les pistes, podeu escollir quines pistes s'extreuen utilitzant les caselles de selecció de la primera columna de la llista de pistes. Només s'extrauran les pistes que seleccioneu.</para>
+
+    <para>També podeu utilitzar els elements de menú <menuchoice><guimenu>Edita</guimenu><guimenuitem>Selecciona-ho tot</guimenuitem></menuchoice> i <menuchoice><guimenu>Edita</guimenu><guimenuitem>Desselecciona-les totes</guimenuitem></menuchoice> per a seleccionar que s'extreguin totes les pistes o cap d'elles.</para>
+
+    <para>Quan hàgiu introduït tota la informació que necessiteu, feu clic en el botó <guibutton>Extreu</guibutton> o premeu <keycombo><keycap>Ctrl</keycap><keycap>Retorn</keycap></keycombo>. El <application>Sound Juicer</application> començarà a llegir l'àudio del CD i a desar-lo en fitxers a l'ordinador. Per defecte, els fitxers d'àudio s'emmagatzemaran a la carpeta <filename>Música</filename> de la vostra carpeta d'usuari.</para>
+
+    <para>Quan comenceu a extreure, el botó <guibutton>Extreu</guibutton> canviarà al botó <guibutton>Atura</guibutton>. Podeu fer clic a aquest botó en qualsevol moment per a aturar l'extracció.</para>
+
+    <para>El <application>Sound Juicer</application> indica quina pista s'està extraient actualment visualitzant una icona al costat del número de la pista. També podeu veure el progrés total i els temps restant estimat en la barra d'estat a la part inferior de la finestra.</para>
+
+    <para>Extreure un CD pot tardar bastant temps, això depèn de la velocitat de l'ordinador. Podeu minimitzar tranquil·lament el <application>Sound Juicer</application> o moure-us a un altre espai de treball per a continuar utilitzant l'ordinador mentre s'extreu l'àudio.</para>
+  </section>
+
+  <section id="playing">
+    <title>Reproducció</title>
+
+    <para>El <application>Sound Juicer</application> us permet reproduir les pistes directament des del CD. Per a iniciar la reproducció d'un CD, simplement feu clic al botó <guibutton>Reprodueix</guibutton> o premeu <keycombo><keycap>Ctrl</keycap><keycap>P</keycap></keycombo>. Per a reproduir una pista en concret, seleccioneu la pista i feu clic a <guibutton>Reprodueix</guibutton>, o simplement feu un doble clic a la pista.</para>
+
+    <para>Quan el <application>Sound Juicer</application> està reproduint un CD, el botó <guibutton>Reprodueix</guibutton> canvia al botó <guibutton>Fes una pausa</guibutton>. Podeu fer-hi clic en qualsevol moment per a fer una pausa a la reproducció, i fer un altre cop clic a <guibutton>Reprodueix</guibutton> per a continuar la reproducció per on estàveu.</para>
+
+    <para>Mentre es reprodueix, el <application>Sound Juicer</application> visualitza un lliscador que mostra la posició de la pista actual. Per a saltar a una altra part de la pista, arrossegueu la nansa pel lliscador i deixeu-la anar.</para>
+  </section>
+
+  <section id="preferences">
+    <title>Preferències</title>
+
+    <para>La finestra de preferències us permet controlar:</para>
+
+    <itemizedlist>
+      <listitem><para>Quina unitat de CD utilitza el <application>Sound Juicer</application>, si teniu més d'una unitat,</para></listitem>
+      <listitem><para>Indicar si s'ha d'expulsar el CD quan el <application>Sound Juicer</application> ha finalitzat l'extracció,</para></listitem>
+      <listitem><para>Indicar si s'ha d'obrir la carpeta de música quan el <application>Sound Juicer</application> ha finalitzat l'extracció,</para></listitem>
+      <listitem><para>Indicar la ubicació en l'ordinador dels fitxers d'àudio extrets,</para></listitem>
+      <listitem><para>Quin sistema s'ha d'utilitzar per a la jerarquia de carpetes en la carpeta de música,</para></listitem>
+      <listitem><para>Quin format s'ha d'utilitzar per als noms de les pistes dels fitxers d'àudio extrets, i</para></listitem>
+      <listitem><para>Quin format de fitxer i còdec s'han d'utilitzar per als fitxers d'àudio extrets.</para></listitem>
+    </itemizedlist>
+
+    <informalfigure>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/prefs.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+            <phrase>Finestra de preferències</phrase>
+          </textobject>
+        </mediaobject>
+      </screenshot>
+    </informalfigure>
+
+    <section id="prefs-drive">
+      <title>Selecció d'una unitat de CD</title>
+
+      <para>Si teniu més d'una unitat de CD en l'ordinador, la llista desplegable anomenada <guilabel>Lector de CD</guilabel> a sota de <guilabel>Dispositiu</guilabel> us permet seleccionar quina unitat utilitzar. Les caselles de selecció <guibutton>Expulsa quan finalitzi</guibutton> i <guibutton>Obre la carpeta de música quan finalitzi</guibutton> us permeten controlar si el <application>Sound Juicer</application> expulsarà el CD de la unitat o si obrirà la carpeta de música quan hagi finalitzat l'extracció dels fitxers d'àudio.</para>
+    </section>
+
+    <section id="prefs-naming">
+      <title>Anomenar els fitxers d'àudio</title>
+
+      <para>La llista desplegable <guilabel>Carpeta de música</guilabel> us permet seleccionar en quina carpeta s'emmagatzemaran els fitxers d'àudio. Seleccioneu una de les carpetes de la llista o seleccioneu <guilabel>Altre</guilabel> per a seleccionar una altra carpeta amb el seleccionador de fitxers. Per defecte, els fitxers són ubicats a la carpeta <filename>Música</filename> dins de la carpeta d'usuari.</para>
+
+      <para>La secció <guilabel>Noms de les pistes</guilabel> us permet controlar com s'anomenaran els fitxers i les carpetes. El <application>Sound Juicer</application> pot emmagatzemar fitxers d'àudio en carpetes separades, ajudant-vos a mantenir la música organitzada. Podeu triar com es crearan i s'anomenaran aquestes carpetes utilitzant la llista desplegable <guilabel>Jerarquia de directori</guilabel>. Per defecte, el <application>Sound Juicer</application> crea una carpeta per a l'artista de l'àlbum i una subcarpeta per a l'àlbum.</para>
+
+      <para>Utilitzeu la llista desplegable <guilabel>Nom del fitxer</guilabel> per a seleccionar com s'anomenaran els fitxers d'àudio. Per defecte, el <application>Sound Juicer</application> utilitza el número de la pista seguit per un guió i el títol de la pista.</para>
+
+      <para>Seleccioneu la casella de selecció <guibutton>Suprimeix els caràcters especials</guibutton> per a fer que el <application>Sound Juicer</application> suprimeixi o reemplaci els caràcters com els espais i els signes de puntuació dels noms de fitxer. Això és útil si teniu previst posar els fitxers d'àudio en un dispositiu portàtil o en un altre ordinador amb més limitacions en els noms de fitxer.</para>
+
+      <note><para>Encara que <guibutton>Suprimeix els caràcters especials</guibutton> no estigui seleccionat, el <application>Sound Juicer</application> suprimirà el caràcter <literal>/</literal> dels noms de fitxer. Aquest caràcter no es pot utilitzar en cap nom de fitxer en UNIX, Linux i sistemes similars.</para></note>
+
+      <tip><para>At the bottom of the <guilabel>Track Names</guilabel> section,
+      an example path is shown.  This lets you know what a file name might look
+      like and where it is placed, according to your settings for <guilabel>Folder
+      hierarchy</guilabel>, <guilabel>File name</guilabel>, and <guibutton>Strip
+      special characters</guibutton>.</para></tip>
+    </section>
+
+    <section id="prefs-format">
+      <title>Selecció d'un format</title>
+
+      <para>Podeu seleccionar quin format de fitxer d'àudio utilitza el <application>Sound Juicer</application> per a emmagatzemar les pistes en l'ordinador. Hi ha uns quants formats disponibles, cadascun amb els seus avantatges. Els formats disponibles en l'ordinador poden variar, però les opcions següents normalment estan disponibles:</para>
+
+      <variablelist>
+        <varlistentry>
+          <term>Qualitat de CD, amb pèrdua (multimèdia Ogg)</term>
+          <listitem>
+            <para>Aquesta opció està seleccionada per defecte. El <ulink url="http://www.vorbis.org/">Ogg Vorbis</ulink>, igual que altres formats d'àudio amb pèrdua (com ara el MP3 i l'ACC) descarten informació de les dades d'àudio original. Encara que el fitxer d'àudio resultant no és una rèplica perfecte de l'àudio del CD, sovint la majoria d'oients no poden distingir les diferències. Com a resultat, els formats amb pèrdua tendeixen a tenir mides de fitxer molt petites.</para>
+
+            <para>El format Ogg Vorbis és el format amb pèrdua predeterminat utilitzat en el <application>Sound Juicer</application>. L'Ogg Vorbis és un format obert, desenvolupat per la <ulink url="http://xiph.org/">Fundació Xiph.Org</ulink>, que intenta produir fitxers de mides més petites i de més qualitat àudio que altres formats amb pèrdues. Encara que no està tant estès com el vell format MP3, la majoria de programari de música pot reproduir fitxers Ogg Vorbis i la majoria de reproductors per maquinari tenen incorporada la compatibilitat.</para>
+
+            <para>La Xiph.Org manté una llista del <ulink url="http://wiki.xiph.org/index.php/VorbisSoftwarePlayers">reproductors per programari</ulink>, <ulink url="http://wiki.xiph.org/index.php/PortablePlayers">reproductors portàtils per maquinari</ulink> i <ulink url="http://wiki.xiph.org/index.php/StaticPlayers">reproductors estàtics per maquinari</ulink> que admeten l'Ogg Vorbis.</para>
+          </listitem>
+        </varlistentry>
+
+        <varlistentry>
+          <term>Qualitat de CD, sense pèrdua (àudio FLAC)</term>
+          <listitem>
+            <para>El format d'àudio <ulink url="http://flac.sourceforge.net/">FLAC</ulink> és un format sense pèrdua. No es perden dades d'àudio quan es converteix a FLAC, encara que comprimeixi els fitxers d'àudio fins a un 70%. El FLAC i altres formats sense pèrdua són populars en casos on es necessita àudio d'alta fidelitat, però els fitxers s'han de comprimir per a estalviar espai del disc i temps de transferència per la xarxa.</para>
+          </listitem>
+        </varlistentry>
+
+        <varlistentry>
+          <term>Qualitat de CD, ACC (àudio MPEG-4)</term>
+          <listitem>
+            <para>El format d'àudio AAC (abreviació d'«Advanced Audio Coding», codificació d'àudio avançada) és un format amb pèrdua estandaritzat. És un successor del format MP3 i aconsegueix millor qualitat de so que aquest. La majoria de reproductors per programari i de reproductors per maquinari admeten el format AAC.</para>
+          </listitem>
+        </varlistentry>
+
+        <varlistentry>
+          <term>Veu, sense pèrdua (àudio WAV)</term>
+          <listitem>
+            <para>El perfil de sortida de veu produeix fitxers d'àudio monofònics de baixa qualitat. Potser voleu seleccionar aquest perfil per a lectures, llibres en cinta i altres CD de parlats, on la pèrdua en la qualitat de l'àudio és menys important.</para>
+          </listitem>
+        </varlistentry>
+        
+<varlistentry>
+          <term>MP3</term>
+          <listitem>
+            <para>El format d'àudio MP3 és un format amb pèrdua. Està àmpliament admès i és molt popular, especialment pel seu ús en reproductors portàtils.</para>
+          </listitem>
+        </varlistentry>
+
+      </variablelist>
+
+      <para>Podeu fer clic en el botó <guibutton>Edita els perfils</guibutton> per a editar els formats d'àudio disponibles. El diàleg de l'editor de perfils proporciona accés directe a la conversió d'àudio. Els perfils es defineixen amb conductes del <application>GStreamer</application>. El <application>GStreamer</application> és la biblioteca multimèdia que utilitzen el <application>Sound Juicer</application> i altres aplicacions multimèdia. Una completa explicació dels perfils d'àudio es troba fora de l'àmbit d'aquest document.</para>
+    </section>
+  </section>
+
+</article>
